@@ -24,19 +24,21 @@ const config = convict({
     },
     it: {
         doc: "Id of the IT chanell",
+        format: String,
         default: null,
         env: "IT",
         arg: "it"
     },
     remote: {
         doc: "Id of the IT/Remote chanell",
+        format: String,
         default: null,
         env: "IT",
         arg: "remote"
     },
     shabashka_odesa: {
         doc: "id of the shabahska odesa chanel",
-        default:'-1001922863417',
+        default: null,
         env: "SHABASHKA_ODESA",
         arg: "shabashka_odesa"
     },
@@ -64,17 +66,23 @@ const config = convict({
 		default: "* * * * * *",
 		arg: "djinnyCoSchedule"
 	},
-    workUaTimezone: {
-		doc: "Time Zone for work ua cron job",
+    djinnyTimezone: {
+		doc: "Time Zone for djinny cron job",
 		format: String,
 		default: "Europe/Kiev",
-		arg: "workUaTimezone",
+		arg: "djinnyTimezone",
 	},
     targets: {
         doc : "Parsing targets",
         format: Object,
         default: null,
         arg: "targets"
+    },
+    hastags: {
+        doc : "Hastags to use. They are cattegories from djinny",
+        format: Array,
+        default: null,
+        arg: "hastags"
     },
     groups: {
         doc : "Groups for IT adds",
