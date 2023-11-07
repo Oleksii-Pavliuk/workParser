@@ -5,4 +5,4 @@ data
 docker-run.sh
 variables.*
 *.tfstate*
-config.json
+*.json
