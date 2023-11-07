@@ -1,0 +1,19 @@
+digraph {
+        compound = "true"
+        newrank = "true"
+        subgraph "root" {
+                "[root] data.digitalocean_ssh_key.terraform (expand)" [label = "data.digitalocean_ssh_key.terraform", shape = "box"]
+                "[root] digitalocean_droplet.parser (expand)" [label = "digitalocean_droplet.parser", shape = "box"]
+                "[root] provider[\"registry.terraform.io/digitalocean/digitalocean\"]" [label = "provider[\"registry.terraform.io/digitalocean/digitalocean\"]", shape = "diamond"]
+                "[root] var.do_token" [label = "var.do_token", shape = "note"]
+                "[root] var.docker_run_script" [label = "var.docker_run_script", shape = "note"]
+                "[root] var.pvt_key" [label = "var.pvt_key", shape = "note"]
+                "[root] data.digitalocean_ssh_key.terraform (expand)" -> "[root] provider[\"registry.terraform.io/digitalocean/digitalocean\"]"
+                "[root] digitalocean_droplet.parser (expand)" -> "[root] data.digitalocean_ssh_key.terraform (expand)"
+                "[root] digitalocean_droplet.parser (expand)" -> "[root] var.docker_run_script"
+                "[root] digitalocean_droplet.parser (expand)" -> "[root] var.pvt_key"
+                "[root] provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" -> "[root] digitalocean_droplet.parser (expand)"
+                "[root] provider[\"registry.terraform.io/digitalocean/digitalocean\"]" -> "[root] var.do_token"
+                "[root] root" -> "[root] provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+        }
+}

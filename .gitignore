@@ -1,0 +1,8 @@
+node_modules
+data
+.env
+*.txt
+docker-run.sh
+variables.*
+*.tfstate*
+config.json

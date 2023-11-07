@@ -1,0 +1,26 @@
+{
+  "name": "parser",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Job adds parser",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "convict": "^6.2.4",
+    "cron": "^2.4.4",
+    "fs": "^0.0.1-security",
+    "html-to-text": "^9.0.5",
+    "jsdom": "^22.1.0",
+    "lodash": "^4.17.21",
+    "node-telegram-bot-api": "^0.63.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node-telegram-bot-api": "^0.61.8"
+  }
+}

@@ -1,0 +1,7 @@
+.github
+.env
+.gitignore
+data
+node_modules
+logs.txt
+*.sh
