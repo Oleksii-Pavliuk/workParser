@@ -4,7 +4,7 @@ import {fetchPage} from '../common/fetching.mjs'
 import {customLog} from '../common/log.mjs'
 import config from "../config/config.mjs";
 
-const hashtags = config.get('hastags');
+// const hashtags = config.get('hastags');
 
 const scrapeAdds = async (document,url) => {
 	const urlPattern = /^\/jobs\/\d+\/$/;
@@ -32,32 +32,32 @@ const parseJobs = async (doms) => {
 		let jsonObj = {}
 		for (const [key, value] of Object.entries(item)) {
 			let dom = new JSDOM(value).window.document;
-			
+
 			if (key) jsonObj.url = key;
 
 			if (dom.querySelector('#h1-name').innerHTML) jsonObj.title = dom.querySelector('#h1-name').innerHTML;
-			
+
 			let sallary = handleSallary(dom);
 			if (sallary) jsonObj.sallary = sallary;
-			
+
 			let employer = handleEmployer(dom);
 			if (employer) jsonObj.employer = employer;
-	
+
 			let address = handleAddress(dom);
 			if (address) jsonObj.address = address;
-			
+
 			let phone = handlePhone(dom);
 			if (phone) jsonObj.phone = phone;
-	
+
 			let description = handleDescription(dom);
 			if (description) jsonObj.description = description;
 
 			let tags = new Set;
-      hashtags.forEach(hastag => {
-        for(const [key1,value1] of Object.entries(hastag)) {
-          if (jsonObj.description.includes(key1) || jsonObj.title.includes(key1)) tags.add(value1.toUpperCase());
-        }
-      })
+      // hashtags.forEach(hastag => {
+      //   for(const [key1,value1] of Object.entries(hastag)) {
+      //     if (jsonObj.description.includes(key1) || jsonObj.title.includes(key1)) tags.add(value1.toUpperCase());
+      //   }
+      // })
       if (tags) jsonObj.hastags = [...tags];
 		}
 		let data = parseFromJsonToText(jsonObj);

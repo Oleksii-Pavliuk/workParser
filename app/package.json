@@ -5,7 +5,8 @@
   "description": "Job adds parser",
   "main": "index.js",
   "scripts": {
-    "start": "node index.mjs"
+    "start": "NODE_ENV=production node index.mjs",
+    "dev": "NODE_ENV=development node index.mjs"
   },
   "author": "",
   "license": "ISC",
