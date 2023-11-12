@@ -1,8 +1,12 @@
 node_modules
 data
 .env
-*.txt
-docker-run.sh
+*logs*
+config.py
+*docker-run.sh
 variables.*
 *.tfstate*
 *.json
+*.ini
+*.session*
+__pycache__
