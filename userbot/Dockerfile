@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64/v3 python:3.11-bullseye
+FROM --platform=linux/amd64 python:3.11-bullseye
 
 # Set the working directory
 WORKDIR /app
