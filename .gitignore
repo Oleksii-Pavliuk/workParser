@@ -10,3 +10,4 @@ variables.*
 *.ini
 *.session*
 __pycache__
+session_*
