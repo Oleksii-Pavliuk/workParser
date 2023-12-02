@@ -11,3 +11,4 @@ variables.*
 *.session*
 __pycache__
 session_*
+.DS_Store
