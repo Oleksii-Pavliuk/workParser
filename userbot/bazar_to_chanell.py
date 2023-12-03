@@ -6,7 +6,12 @@ def bazar_to_chanell(app,client,message,target):
   send_to_chat = target["send_to"]
   chanell_link = target["chanell_link"]
   chat_link = target["chat_link"]
-  signature = f"\n\n<b><a href='{chanell_link}'>☑️НАШ КАНАЛ</a></b>👈\n<b><a href='{chat_link}'>👉НАШ ЧАТ☑️</a></b>"
+
+  signature = f"\n"
+  if chanell_link:
+    signature + f"\n<b><a href='{chanell_link}'>☑️НАШ КАНАЛ</a></b>👈"
+  if chat_link:
+    signature + f"\n<b><a href='{chat_link}'>👉НАШ ЧАТ☑️</a></b>"
   if message.sender_chat and message.sender_chat.id and message.sender_chat.id == target_chat:
     if message.text:
       if "http" not in message.text and "bazar" not in message.text.lower():
