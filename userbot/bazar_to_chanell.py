@@ -4,15 +4,19 @@ from datetime import datetime
 def bazar_to_chanell(app,client,message,target):
   target_chat = target["target"]
   send_to_chat = target["send_to"]
-  chanell_link = target["chanell_link"]
-  chat_link = target["chat_link"]
 
-  signature = f"\n"
-  if chanell_link:
-    signature + f"\n<b><a href='{chanell_link}'>☑️НАШ КАНАЛ</a></b>👈"
-  if chat_link:
-    signature + f"\n<b><a href='{chat_link}'>👉НАШ ЧАТ☑️</a></b>"
   if message.sender_chat and message.sender_chat.id and message.sender_chat.id == target_chat:
+    chanell_link = target["chanell_link"] if "chanell_link" in target else None
+    chat_link = target["chat_link"] if "chat_link" in target else None
+
+    signature = f"\n"
+    if chanell_link:
+      signature += f"\n<b><a href='{chanell_link}'>☑️НАШ КАНАЛ</a></b>👈"
+      print('1')
+    if chat_link:
+      signature += f"\n<b><a href='{chat_link}'>👉НАШ ЧАТ☑️</a></b>"
+      print('2')
+    print(signature)
     if message.text:
       if "http" not in message.text and "bazar" not in message.text.lower():
         try:
