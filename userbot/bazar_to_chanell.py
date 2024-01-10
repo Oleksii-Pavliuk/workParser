@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from bazar_scrape import scrape_phone
 
 def bazar_to_chanell(app,client,message,target):
   target_chat = target["target"]
@@ -12,18 +12,22 @@ def bazar_to_chanell(app,client,message,target):
     signature = f"\n"
     if chanell_link:
       signature += f"\n<b><a href='{chanell_link}'>☑️НАШ КАНАЛ</a></b>👈"
-      print('1')
     if chat_link:
       signature += f"\n<b><a href='{chat_link}'>👉НАШ ЧАТ☑️</a></b>"
-      print('2')
-    print(signature)
+
+
+
     if message.text:
       if "http" not in message.text and "bazar" not in message.text.lower():
         try:
           print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
           print(message.text)
-          text = message.text + signature
-          client.send_message(send_to_chat,text)
+          text = message.text
+          website_phone = check_phone(message)
+          if website_phone:
+            text = text + f"\nКонтакты:\n📲 +{website_phone}"
+            text = text + signature
+            client.send_message(send_to_chat,text)
         except TypeError or KeyError:
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
           print(message)
@@ -32,7 +36,11 @@ def bazar_to_chanell(app,client,message,target):
         try:
           print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
           print(message.caption)
-          text = message.caption + signature
+          text = message.text
+          website_phone = check_phone(message)
+          if website_phone:
+            text = text + f"\nКонтакты:\n📲 +{website_phone}"
+          text = text + signature
           app.send_photo(send_to_chat,message.photo.file_id,text)
         except TypeError or KeyError:
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
@@ -42,8 +50,30 @@ def bazar_to_chanell(app,client,message,target):
         try:
           print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
           print(message.caption)
-          text = message.caption + signature
+          text = message.text
+          website_phone = check_phone(message)
+          if website_phone:
+            text = text + f"\nКонтакты:\n📲 +{website_phone}"
+          text = text + signature
           app.send_message(send_to_chat,text)
         except TypeError or KeyError:
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
           print(message)
+
+
+
+
+def check_phone(message):
+  if message.reply_markup and message.reply_markup.inline_keyboard:
+    first_button = message.reply_markup.inline_keyboard[0][0]
+    if first_button:
+      url = first_button.url
+      website_phone = scrape_phone(url)
+      if website_phone:
+        return website_phone
+      else:
+        return None
+    else:
+      return None
+  else:
+    return None
