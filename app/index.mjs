@@ -37,7 +37,7 @@ try{
 	djinnyParser.startCronJob();
 	djinnyParser.AddsJob();
 
-	const untaggedCronJob = new CronJob(workUaSchedule,() => untaggedJob(bot,'it'),null,true,timeZone);
+	// const untaggedCronJob = new CronJob(workUaSchedule,() => untaggedJob(bot,'it'),null,true,timeZone);
 	const workUaCronJob = new CronJob(workUaSchedule,() => workUaJobShabashaka(bot),null,true,timeZone);
 
 	process.on("SIGTERM", doGracefulShutdown);
