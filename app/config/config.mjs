@@ -38,6 +38,7 @@ const config = convict({
     },
     shabashka_odesa: {
         doc: "id of the shabahska odesa chanel",
+        format: String,
         default: null,
         env: "SHABASHKA_ODESA",
         arg: "shabashka_odesa"
@@ -78,12 +79,12 @@ const config = convict({
         default: null,
         arg: "targets"
     },
-    hastags: {
-        doc : "Hastags to use. They are cattegories from djinny",
-        format: Array,
-        default: null,
-        arg: "hastags"
-    },
+    // hastags: {
+    //     doc : "Hastags to use. They are cattegories from djinny",
+    //     format: Array,
+    //     default: null,
+    //     arg: "hastags"
+    // },
     groups: {
         doc : "Groups for IT adds",
         format: Object,
