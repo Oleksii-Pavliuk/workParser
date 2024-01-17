@@ -26,9 +26,9 @@ def bazar_to_chanell(app,client,message,target):
           website_phone = check_phone(message)
           if website_phone:
             text = text + f"\nКонтакты:\n📲 +{website_phone}"
-            text = text + signature
-            client.send_message(send_to_chat,text)
-        except TypeError or KeyError as e:
+          text = text + signature
+          client.send_message(send_to_chat,text)
+        except Exception as e:
           print(e)
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
     elif message.caption and message.photo and message.photo.file_id:
@@ -42,7 +42,7 @@ def bazar_to_chanell(app,client,message,target):
             text = text + f"\nКонтакты:\n📲 +{website_phone}"
           text = text + signature
           app.send_photo(send_to_chat,message.photo.file_id,text)
-        except TypeError or KeyError as e:
+        except Exception as e:
           print(e)
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
     elif message.caption:
@@ -56,7 +56,7 @@ def bazar_to_chanell(app,client,message,target):
             text = text + f"\nКонтакты:\n📲 +{website_phone}"
           text = text + signature
           app.send_message(send_to_chat,text)
-        except TypeError or KeyError as e:
+        except Exception as e:
           print(e)
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
 
