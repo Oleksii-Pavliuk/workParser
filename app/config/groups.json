@@ -461,7 +461,6 @@
     "User Interface Designer",
     "User Experience Designer",
     "Graphic Designer (UI/UX)",
-    "Web Designer",
     "Interface Designer",
     "Mobile Interface Designer",
     "Visual UI/UX Designer",
@@ -471,18 +470,14 @@
     "Web App UI/UX Designer",
     "Social Media UI/UX Designer",
     "Game UI/UX Designer",
-    "Multimedia App Designer",
-    "Web Graphics Designer",
     "Adaptive UI/UX Designer",
     "User Experience Design Specialist",
     "Usability Designer",
     "Wireframe Designer",
     "Графический дизайнер интерфейса (UI)",
     "Дизайнер пользовательского опыта (UX)",
-    "Веб-дизайнер",
     "Интерфейсный дизайнер",
     "Дизайнер мобильных интерфейсов",
-    "Графический дизайнер для приложений",
     "Визуальный дизайнер пользовательского интерфейса (UI)",
     "Дизайнер пользовательского взаимодействия",
     "Дизайнер мобильных приложений",
@@ -492,11 +487,19 @@
     "Интерфейсный дизайнер для социальных сетей",
     "Дизайнер игровых интерфейсов",
     "Дизайнер медиа-приложений",
-    "Графический дизайнер веб-графики",
     "Дизайнер адаптивных интерфейсов",
     "UI",
     "UX",
     "UX-Writer"
+  ],
+  "Designer": [
+    "Graphic designer",
+    "Graphic design",
+    "Web designer",
+    "Web design",
+    "Графический дизайнер",
+    "Веб дизайнер",
+    "Веб-дизайнер"
   ],
   "ERP": [
     "Специалист по ERP",
@@ -598,7 +601,7 @@
     ".NET",
     "C#"
   ],
-  "Full-Stack":[
+  "Full_Stack":[
     "Full-Stack",
     "Full Stack",
     "FullStack"
@@ -653,7 +656,7 @@
     "Laravel",
     "PHP"
   ],
-  "Scrum Master":[
+  "Scrum_Master":[
     "Scrum Master",
     "Scrum"
   ]
