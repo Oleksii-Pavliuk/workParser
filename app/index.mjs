@@ -5,8 +5,9 @@ import process from "node:process";
 
 import config from "./config/config.mjs";
 import { workUaJobShabashaka } from './workUa-shabashka/index.mjs';
-import { DjinnyParser } from "./djinnyCo/index.mjs";
-import { WorkUaParser } from "./workUa/index.mjs";
+import { Parser } from "./parser/parser.mjs";
+import { parseJobs as workUaParse,scrapeAdds as workUaScrape } from "./workUa/workUa-parsing.mjs";
+import { parseJobs as djinnyCoParse,scrapeAdds as djinnyCoScrape } from "./djinnyCo/djinnyCo-parsing.mjs";
 import { customLog } from "./common/log.mjs";
 import { doGracefulShutdown } from "./common/shutDown.mjs"
 import { untaggedJob } from "./untagged/index.mjs"
@@ -28,17 +29,17 @@ try{
 	bot.on("polling_error",customLog);
 
 	// work.ua parser
-	const workUaParser = new WorkUaParser(workUaSchedule,targets.workUa,'it',bot,timeZone);
+	const workUaParser = new Parser(workUaSchedule,targets.workUa,'it',bot,timeZone,workUaScrape,workUaParse);
 	workUaParser.startCronJob();
 	workUaParser.AddsJob();
 
 	//djinny.co parser
-	const djinnyParser = new DjinnyParser(djinnyCoSchedule,targets.djinnyCo,'it',bot,timeZone);
+	const djinnyParser = new Parser(djinnyCoSchedule,targets.djinnyCo,'it',bot,timeZone,djinnyCoScrape,djinnyCoParse);
 	djinnyParser.startCronJob();
 	djinnyParser.AddsJob();
 
 	// const untaggedCronJob = new CronJob(workUaSchedule,() => untaggedJob(bot,'it'),null,true,timeZone);
-	const workUaCronJob = new CronJob(workUaSchedule,() => workUaJobShabashaka(bot),null,true,timeZone);
+	// const workUaCronJob = new CronJob(workUaSchedule,() => workUaJobShabashaka(bot),null,true,timeZone);
 
 	process.on("SIGTERM", doGracefulShutdown);
 	process.on("SIGINT", doGracefulShutdown);

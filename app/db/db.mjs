@@ -115,6 +115,7 @@ export class Database {
       throw new Error(err);
     }
   }
+
   appendUniqly(path,value) {
     try{
       let one = this.get(path);
@@ -133,6 +134,7 @@ export class Database {
       throw new Error(err);
     }
   }
+
   getUniq(path) {
     try{
       let one = this.get(path);
@@ -167,6 +169,7 @@ export class Database {
   onUpdate(path,callback) {
     this.#listeners[path] = callback;
   }
+
   getListners(){
     return this.#listeners;
   }

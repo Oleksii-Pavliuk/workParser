@@ -5,29 +5,32 @@ import {CronJob} from "cron";
 import config from "../config/config.mjs";
 import { customLog } from "../common/log.mjs";
 import { fetchPage } from '../common/fetching.mjs'
-import { scrapeAdds, parseJobs } from './djinnyCo-parsing.mjs';
 import { Database } from '../db/db.mjs';
 import { tagAdd } from '../common/taggingService.mjs';
 
 
 
-export class DjinnyParser {
+export class Parser {
 
 		/**
-	 * Create a new ```Parser from djinny.co```.
+	 * Create a new ```Parser```.
 	 * @param schedule The time to fire off parsing cronJob. This can be in the form of cron syntax or a JS ```Date``` object.
 	 * @param path is an object with url of the website's root and url of the adds page: {url: "www.djinny.co", uri: "/adds"}.
 	 * @param channel string with the key to the channel in convict's config.
 	 * @param bot TelegramBot.
 	 * @param timeZone Specify the timezone for the execution. This will modify the actual time relative to your timezone. If the timezone is invalid, an error is thrown. Can be any string accepted by luxon's ```DateTime.setZone()``` (https://moment.github.io/luxon/api-docs/index.html#datetimesetzone).
+	 * @param scrapeAdds Specify the function that scrapes adds.
+	 * @param timeZone  Specify the function that parses adds.
 	 */
-	constructor(schedule,path,channel,bot,timeZone) {
+	constructor(schedule,path,channel,bot,timeZone,scrapeAdds,parseJobs) {
 		this.cronSchedule = schedule;
 		this.timeZone = timeZone;
 		this.path = path;
 		this.channel = channel;
 		this.#bot = bot;
 		this.#db = new Database(this.channel);
+		this.scrapeAdds = scrapeAdds;
+		this.parseJobs = parseJobs;
 	}
 	cronSchedule
 	timeZone
@@ -73,9 +76,9 @@ export class DjinnyParser {
 				let htmlContent = await fetchPage(this.path.url+this.path.uri);
 				const dom = new JSDOM(htmlContent).window.document;
 
-				let jobsHtmls = await scrapeAdds(dom,this.path.url);
+				let jobsHtmls = await this.scrapeAdds(dom,this.path.url);
 
-				let jobAdds = await parseJobs(jobsHtmls);
+				let jobAdds = await this.parseJobs(jobsHtmls);
 				let tagged = 0;
 				jobAdds.forEach((addObj) => {
 					addObj = tagAdd(addObj);
@@ -86,7 +89,7 @@ export class DjinnyParser {
 						})
 					}
 				})
-				customLog(`djinnyIT parsing done, ${tagged} adds tagged and ${jobAdds.length - tagged} not`);
+				customLog(`${this.path.url.slice(8)} parsing done, ${tagged} adds tagged and ${jobAdds.length - tagged} not`);
 		}catch (err){
 			customLog(err);
 			console.log(err);
