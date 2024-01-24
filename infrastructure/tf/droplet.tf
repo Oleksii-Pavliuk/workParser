@@ -15,12 +15,13 @@ resource "digitalocean_droplet" "parser" {
   }
 
   provisioner "remote-exec" {
-    inline = [ 
+    inline = [
       "sudo apt -y update",
       "sudo apt -y install curl",
       "curl -fsSL https://get.docker.com -o get-docker.sh",
       "sudo sh get-docker.sh",
-      "${file(var.docker_run_script)}"
+      "${file(var.bot_docker_run_script)}",
+      "${file(var.userbot_docker_run_script)}"
     ]
   }
 }

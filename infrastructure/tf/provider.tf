@@ -7,8 +7,12 @@ terraform {
   }
 }
 
-variable "docker_run_script" {
+variable "bot_docker_run_script" {
   default = "../docker-run.sh"
+}
+
+variable "userbot_docker_run_script" {
+  default = "../userbot-docker-run.sh"
 }
 
 provider "digitalocean" {
