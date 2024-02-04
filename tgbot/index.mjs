@@ -1,9 +1,10 @@
 import TelegramBot from 'node-telegram-bot-api';
-import {CronJob} from "cron"
 import process from "node:process";
+import express from "express";
 
 
 import config from "./config/config.mjs";
+import { register as registerConsul } from "./consul/consul-connection.mjs";
 import { workUaJobShabashaka } from './workUa-shabashka/index.mjs';
 import { Parser } from "./parser/parser.mjs";
 import { parseJobs as workUaParse,scrapeAdds as workUaScrape } from "./workUa/workUa-parsing.mjs";
@@ -13,12 +14,16 @@ import { doGracefulShutdown } from "./common/shutDown.mjs"
 import { untaggedJob } from "./untagged/index.mjs"
 
 
+
 const token = config.get('botToken');
 const workUaSchedule = config.get('workUaSchedule');
 const djinnyCoSchedule = config.get('djinnyCoSchedule');
 const timeZone = config.get('workUaTimezone');
 const targets = config.get('targets');
 
+const app = express();
+app.use(express.json());
+const PORT = config.get("port");
 
 try{
 	if (!token) {
@@ -43,6 +48,16 @@ try{
 
 	process.on("SIGTERM", doGracefulShutdown);
 	process.on("SIGINT", doGracefulShutdown);
+
+
+	app.get("/health", (_req, res) => {
+		res.sendStatus(200);
+	});
+
+	app.listen(PORT, () => {
+		console.log(`listening on port ${PORT}`);
+		registerConsul();
+	});
 
 } catch (err) {
 	customLog(err);

@@ -8,6 +8,13 @@ const config = convict({
 		default: null,
 		env: "NODE_ENV",
 	},
+	port: {
+		doc: "The port to bind.",
+		format: "port",
+		default: 3000,
+		env: "PORT",
+		arg: "port",
+	},
     logsChat: {
 		doc: "Id of the logs chat",
 		format: String,
@@ -90,7 +97,39 @@ const config = convict({
         format: Object,
         default: null,
         arg: "groups"
-    }
+    },
+    ServiceName: {
+		doc: "The name by which the service is registered in Consul. If not specified, the service is not registered",
+		format: "*",
+		default: "Telegram Bot Service",
+		env: "SERVICE_NAME",
+	},
+	consulHost: {
+		doc: "The host where the Consul server runs",
+		format: String,
+		default: "consul-client",
+		env: "CONSUL_HOST",
+		arg: "consulhost"
+	},
+	consulPort: {
+		doc: "The port for the Consul client",
+		format: "port",
+		default: 8500,
+		env: "CONSUL_PORT",
+	},
+	jaegerHost: {
+		doc: "The host where the Jaeger UI",
+		format: String,
+		default: "jaeger",
+		env: "JAEGER_HOST",
+		arg: "jaegerhost"
+	},
+	jaegerPort: {
+		doc: "The port for Jaeger UI",
+		format: "port",
+		default: 4318,
+		env: "JAEGER_PORT",
+	},
 })
 const env = config.get("env");
 config.loadFile(`./config/${env}.json`);
