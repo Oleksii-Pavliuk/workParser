@@ -3,10 +3,10 @@ data
 .env
 *logs*
 config.py
-*docker-run.sh
+*run.sh
 variables.*
 *.tfstate*
-*.json
+app/*/*.json
 *.ini
 *.session*
 __pycache__

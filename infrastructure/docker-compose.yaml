@@ -1,0 +1,96 @@
+---
+version: "3.9"
+services:
+
+
+  work-parser:
+    image: cplk01/work-parser:latest
+    container_name: work-parser-service
+    environment:
+      - BOT_TOKEN= ${BOT_TOKEN}
+      - IT_CHAT= ${IT_CHAT}
+      - IT=${IT}
+      - SHABASHKA_ODESA_CHAT= ${SHABASHKA_ODESA_CHAT}
+      - SHABASHKA_ODESA= ${SHABASHKA_ODESA}
+      - LOGS_CHAT= ${LOGS_CHAT}
+      - DJINNY_EMAIL= ${DJINNY_EMAIL}
+      - DJINNY_PASSWORD= ${DJINNY_PASSWORD}
+    ports:
+      - "3000:3001"
+    networks:
+      - my-network
+
+  userbot:
+    image: cplk01/userbot:latest
+    container_name: userbot-service
+    networks:
+      - my-network
+
+
+
+
+
+# AUX SERVICES
+  mongo:
+    image: mongo
+    container_name: db-mongo
+    environment:
+      - MONGO_INITDB_DATABASE=dev
+      - MONGO_INITDB_ROOT_USERNAME=user
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - my-network
+
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: jaeger
+    ports:
+      - "16686:16686"
+      - "4317:4317"
+      - "4318:4318"
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    networks:
+      - my-network
+
+
+  consul-server:
+    image: hashicorp/consul:1.14.4
+    container_name: consul-server
+    restart: always
+    volumes:
+      - ./consul/server.json:/consul/config/server.json:ro
+    networks:
+      - my-network
+    ports:
+      - 8500:8500
+      - 8600:8600/tcp
+      - 8600:8600/udp
+    command: agent
+
+  consul-client:
+    image: hashicorp/consul:1.14.4
+    container_name: consul-client
+    restart: always
+    volumes:
+      - ./consul/client.json:/consul/config/client.json:ro
+    networks:
+      - my-network
+    command: agent
+
+
+
+
+
+volumes:
+  mongo-data:
+
+networks:
+  my-network:
+    name: my-network
+    driver: bridge

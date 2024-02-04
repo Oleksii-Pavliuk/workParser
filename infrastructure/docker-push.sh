@@ -2,7 +2,7 @@
 
 version=$1
 
-docker build -t cplk01/work-parser ../app
+docker build -t cplk01/work-parser ../tgbot
 
 docker tag cplk01/work-parser cplk01/work-parser:latest
 
