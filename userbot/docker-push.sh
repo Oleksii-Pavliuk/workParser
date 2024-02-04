@@ -2,7 +2,7 @@
 
 version=$1
 
-docker build -t cplk01/userbot ../userbot
+docker build -t cplk01/userbot .
 
 docker tag cplk01/userbot cplk01/userbot:latest
 

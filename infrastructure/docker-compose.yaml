@@ -2,29 +2,59 @@
 version: "3.9"
 services:
 
+  # api-gateway:
+  #   image: cplk01/api-gateway:latest
+  #   container_name: api-gateway
+  #   ports:
+  #     - "3000:3000"
+  #   networks:
+  #     - my-network
+
 
   work-parser:
     image: cplk01/work-parser:latest
     container_name: work-parser-service
     environment:
-      - BOT_TOKEN= ${BOT_TOKEN}
-      - IT_CHAT= ${IT_CHAT}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - IT_CHAT=${IT_CHAT}
       - IT=${IT}
-      - SHABASHKA_ODESA_CHAT= ${SHABASHKA_ODESA_CHAT}
-      - SHABASHKA_ODESA= ${SHABASHKA_ODESA}
-      - LOGS_CHAT= ${LOGS_CHAT}
-      - DJINNY_EMAIL= ${DJINNY_EMAIL}
-      - DJINNY_PASSWORD= ${DJINNY_PASSWORD}
+      - SHABASHKA_ODESA_CHAT=${SHABASHKA_ODESA_CHAT}
+      - SHABASHKA_ODESA=${SHABASHKA_ODESA}
+      - LOGS_CHAT=${LOGS_CHAT}
+      - DJINNY_EMAIL=${DJINNY_EMAIL}
+      - DJINNY_PASSWORD=${DJINNY_PASSWORD}
+      - CONSUL_HOST=${CONSUL_HOST}
+      - CONSUL_PORT=${CONSUL_PORT}
+      - JAEGER_HOST=${JAEGER_HOST}
+      - JAEGER_PORT=${JAEGER_PORT}
     ports:
       - "3000:3001"
     networks:
       - my-network
+    depends_on:
+      - mongo
+      - jaeger
+      - consul-client
+      - consul-server
+
+
 
   userbot:
     image: cplk01/userbot:latest
     container_name: userbot-service
+    environment:
+      - CONSUL_HOST=${CONSUL_HOST}
+      - CONSUL_PORT=${CONSUL_PORT}
+      - JAEGER_HOST=${JAEGER_HOST}
+      - JAEGER_PORT=${JAEGER_PORT}
     networks:
       - my-network
+    depends_on:
+      - mongo
+      - jaeger
+      - consul-client
+      - consul-server
+
 
 
 
