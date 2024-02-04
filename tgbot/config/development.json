@@ -1,0 +1,22 @@
+{
+	"logsFile": "logs.txt",
+	"workUaSchedule": "* * * * *",
+	"workUaTimezone": "Europe/Kiev",
+	"djinnyCoSchedule": "* * * * *",
+	"djinnyTimezone": "Europe/Kiev",
+	"botToken": "6460730635:AAFEW8FsoBCCE_Vd7hIYa2ls-Cv_lrxVXl8",
+	"it": "-1001999061243",
+	"remote": "-1001999061243",
+	"logsChat": "-1001999061243",
+	"shabashka_odesa": "-1001999061243",
+	"targets":{
+		"djinnyCo": {
+			"url": "https://djinni.co",
+			"uri": "/jobs/?employment=remote"
+		},
+		"workUa": {
+			"url": "https://www.work.ua",
+			"uri": "/jobs-it/"
+		}
+	}
+}
