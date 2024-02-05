@@ -6,6 +6,7 @@ config.py
 *run.sh
 variables.*
 *.tfstate*
+config/*.json
 app/*/*.json
 *.ini
 *.session*
