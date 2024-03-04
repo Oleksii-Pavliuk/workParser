@@ -52,20 +52,24 @@ export class Parser {
 	}
 
 	async #checkFor10addsAndSendMessage(path) {
-		const adds = this.#db.get(path);
-		if (adds && adds.length && adds.length > 9) {
-			const heading = '<b>Список актуальних вакансій за посадою #' + path + '</b>\n\n'
-			let text = heading;
-			adds.forEach((add,index) => {
-				if (add.text) {
-					text += `${index+1}.${add.text}\n\n`
+		try{
+			const adds = this.#db.get(path);
+			if (adds && adds.length && adds.length > 9) {
+				const heading = '<b>Список актуальних вакансій за посадою #' + path + '</b>\n\n'
+				let text = heading;
+				adds.forEach((add,index) => {
+					if (add.text) {
+						text += `${index+1}.${add.text}\n\n`
+					}
+				})
+				if (text > heading){
+					const chatId = config.get(this.channel);
+					setTimeout(() => this.#bot.sendMessage(chatId, text, {'parse_mode': 'HTML'}),1000)
 				}
-			})
-			if (text > heading){
-				const chatId = config.get(this.channel);
-				setTimeout(() => this.#bot.sendMessage(chatId, text, {'parse_mode': 'HTML'}),1000)
+				this.#db.clear(path);
 			}
-			this.#db.clear(path);
+		}catch(err){
+			customLog(err);
 		}
 	}
 
