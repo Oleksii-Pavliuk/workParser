@@ -1,3 +1,8 @@
+resource "digitalocean_reserved_ip" "parser_ip" {
+  region = "fra1"
+}
+
+
 resource "digitalocean_droplet" "parser" {
   image = "ubuntu-20-04-x64"
   name = "parser"
@@ -20,8 +25,25 @@ resource "digitalocean_droplet" "parser" {
       "sudo apt -y install curl",
       "curl -fsSL https://get.docker.com -o get-docker.sh",
       "sudo sh get-docker.sh",
-      "${file(var.bot_docker_run_script)}",
-      "${file(var.userbot_docker_run_script)}"
+
+      "touch docker-compose.yaml",
+      "echo '${file(var.docker_compose_file)}' > docker-compose.yaml",
+
+      "mkdir consul",
+      "touch consul/client.json",
+      "echo '${file(var.consul_client_config)}' > consul/client.json",
+      "touch consul/server.json",
+      "echo '${file(var.consul_server_config)}' > consul/server.json",
+
+      "${file(var.docker_compose_script)}"
     ]
   }
 }
+
+
+
+resource "digitalocean_reserved_ip_assignment" "parser_ip" {
+  ip_address = digitalocean_reserved_ip.parser_ip.ip_address
+  droplet_id = digitalocean_droplet.parser.id
+}
+

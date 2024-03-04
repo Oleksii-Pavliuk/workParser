@@ -7,12 +7,24 @@ terraform {
   }
 }
 
-variable "bot_docker_run_script" {
-  default = "../docker-run.sh"
+variable "docker_compose_file" {
+  default = "../docker-compose.yaml"
 }
 
-variable "userbot_docker_run_script" {
-  default = "../userbot-docker-run.sh"
+variable "docker_compose_script" {
+  default = "../compose-run.sh"
+}
+
+variable "consul_client_config" {
+  default = "../consul/client.json"
+}
+
+variable "consul_server_config" {
+  default = "../consul/server.json"
+}
+
+output "reserved_ip_address" {
+  value = digitalocean_reserved_ip_assignment.parser_ip.ip_address
 }
 
 provider "digitalocean" {
