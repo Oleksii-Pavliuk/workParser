@@ -13,6 +13,7 @@ services:
 
   work-parser:
     image: cplk01/work-parser:latest
+    restart: unless-stopped
     container_name: work-parser-service
     environment:
       - BOT_TOKEN=${BOT_TOKEN}
@@ -41,6 +42,7 @@ services:
 
   userbot:
     image: cplk01/userbot:latest
+    restart: unless-stopped
     container_name: userbot-service
     environment:
       - CONSUL_HOST=${CONSUL_HOST}
@@ -63,6 +65,7 @@ services:
 # AUX SERVICES
   mongo:
     image: mongo
+    restart: unless-stopped
     container_name: db-mongo
     environment:
       - MONGO_INITDB_DATABASE=dev
@@ -79,6 +82,7 @@ services:
   jaeger:
     image: jaegertracing/all-in-one:latest
     container_name: jaeger
+    restart: unless-stopped
     ports:
       - "16686:16686"
       - "4317:4317"
