@@ -20,7 +20,7 @@ export const untaggedJob = async (bot,channel) => {
           }catch(err){
             console.log(err);
           }
-          delay =+ 10000;
+          delay += 10000;
           entry.sent = true;
           entries[index] = entry;
           count++;

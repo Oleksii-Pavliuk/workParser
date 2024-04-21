@@ -1,4 +1,5 @@
 from datetime import datetime
+from settings import log
 
 
 def duplicate(app,client,message):
@@ -9,24 +10,31 @@ def duplicate(app,client,message):
       try:
         print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
         print(message.text)
+        log(message,None)
         client.send_message(it_send_to,message.text)
-      except TypeError or KeyError:
+      except (Exception,) as e:
         print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
         print(message)
+        log(message,e)
     elif message.caption and message.photo and message.photo.file_id:
 
       try:
         print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
         print(message.caption)
+        log(message,None)
         app.send_photo(it_send_to,message.photo.file_id,message.caption)
-      except TypeError or KeyError:
+      except (Exception,) as e:
         print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
         print(message)
+        log(message,e)
+
     elif message.caption:
       try:
         print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
         print(message.caption)
+        log(message,None)
         app.send_message(it_send_to,message.caption)
-      except TypeError or KeyError:
+      except (Exception,) as e:
         print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
         print(message)
+        log(message,e)
