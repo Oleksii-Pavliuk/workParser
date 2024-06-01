@@ -1,11 +1,13 @@
 from datetime import datetime
 from bazar_scrape import scrape_phone
+from settings import log
 
 def bazar_to_chanell(app,client,message,target):
   target_chat = target["target"]
   send_to_chat = target["send_to"]
 
   if message.sender_chat and message.sender_chat.id and message.sender_chat.id == target_chat:
+    print(message)
     chanell_link = target["chanell_link"] if "chanell_link" in target else None
     chat_link = target["chat_link"] if "chat_link" in target else None
 
@@ -22,6 +24,7 @@ def bazar_to_chanell(app,client,message,target):
         try:
           print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
           print(message)
+          log(message,None)
           text = message.text
           website_phone = check_phone(message)
           if website_phone:
@@ -30,13 +33,15 @@ def bazar_to_chanell(app,client,message,target):
           client.send_message(send_to_chat,text)
         except Exception as e:
           print(e)
+          log(message,e)
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
     elif message.caption and message.photo and message.photo.file_id:
       if "http" not in message.caption and "bazar" not in message.caption.lower():
         try:
           print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
           print(message)
-          text = message.text
+          text = message
+          log(message,None)
           website_phone = check_phone(message)
           if website_phone:
             text = text + f"\nКонтакты:\n📲 +{website_phone}"
@@ -44,13 +49,15 @@ def bazar_to_chanell(app,client,message,target):
           app.send_photo(send_to_chat,message.photo.file_id,text)
         except Exception as e:
           print(e)
+          log(message,e)
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
     elif message.caption:
       if "http" not in message.caption and "bazar" not in message.caption.lower():
         try:
           print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
           print(message)
-          text = message.text
+          text = message
+          log(message,None)
           website_phone = check_phone(message)
           if website_phone:
             text = text + f"\nКонтакты:\n📲 +{website_phone}"
@@ -58,6 +65,7 @@ def bazar_to_chanell(app,client,message,target):
           app.send_message(send_to_chat,text)
         except Exception as e:
           print(e)
+          log(message,e)
           print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
 
 

@@ -33,7 +33,6 @@ services:
     networks:
       - my-network
     depends_on:
-      - mongo
       - jaeger
       - consul-client
       - consul-server
@@ -52,7 +51,6 @@ services:
     networks:
       - my-network
     depends_on:
-      - mongo
       - jaeger
       - consul-client
       - consul-server
@@ -63,21 +61,6 @@ services:
 
 
 # AUX SERVICES
-  mongo:
-    image: mongo
-    restart: unless-stopped
-    container_name: db-mongo
-    environment:
-      - MONGO_INITDB_DATABASE=dev
-      - MONGO_INITDB_ROOT_USERNAME=user
-      - MONGO_INITDB_ROOT_PASSWORD=password
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-    networks:
-      - my-network
-
 
   jaeger:
     image: jaegertracing/all-in-one:latest
