@@ -5,12 +5,9 @@ from settings import log
 def bazar_to_chanell(app,client,message,target):
   target_chat = target["target"]
   send_to_chat = target["send_to"]
-
   if message.sender_chat and message.sender_chat.id and message.sender_chat.id == target_chat:
-    print(message)
     chanell_link = target["chanell_link"] if "chanell_link" in target else None
     chat_link = target["chat_link"] if "chat_link" in target else None
-
     signature = f"\n"
     if chanell_link:
       signature += f"\n<b><a href='{chanell_link}'>☑️НАШ КАНАЛ</a></b>👈"
