@@ -1,3 +1,4 @@
+from config import logs_chat
 # from datetime import datetime
 
 # import atexit
@@ -69,14 +70,15 @@
 #      print(e)
 
 
-def log(message,error):
-  return
-  tracer = trace.get_tracer(__name__)
-  span = tracer.start_span("log")
-  # Your logic for the separate operation
-  span.add_event(message)
-  if not error:
-    span.add_event("Success")
-  else:
-      span.record_exception(error)
-  span.end()
+def log(client,message,error):
+    client.send_message(logs_chat,str(error) + '\n' + str(message))
+  # return
+  # tracer = trace.get_tracer(__name__)
+  # span = tracer.start_span("log")
+  # # Your logic for the separate operation
+  # span.add_event(message)
+  # if not error:
+  #   span.add_event("Success")
+  # else:
+  #     span.record_exception(error)
+  # span.end()

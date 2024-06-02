@@ -10,31 +10,31 @@ def duplicate(app,client,message):
       try:
         print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
         print(message.text)
-        log(message,None)
+        log(client,message,"send")
         client.send_message(it_send_to,message.text)
       except (Exception,) as e:
         print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
         print(message)
-        log(message,e)
+        log(client,message,e)
     elif message.caption and message.photo and message.photo.file_id:
 
       try:
         print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
         print(message.caption)
-        log(message,None)
+        log(client,message,"send")
         app.send_photo(it_send_to,message.photo.file_id,message.caption)
       except (Exception,) as e:
         print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
         print(message)
-        log(message,e)
+        log(client,message,e)
 
     elif message.caption:
       try:
         print("{datetime} ----------------------------- match".format(datetime=datetime.now()))
         print(message.caption)
-        log(message,None)
+        log(client,message,"send")
         app.send_message(it_send_to,message.caption)
       except (Exception,) as e:
         print("{datetime} ------------------------- wrong key".format(datetime=datetime.now()))
         print(message)
-        log(message,e)
+        log(client,message,e)

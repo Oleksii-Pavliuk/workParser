@@ -15,7 +15,7 @@ const config = convict({
 		env: "PORT",
 		arg: "port",
 	},
-    logsChat: {
+  logsChat: {
 		doc: "Id of the logs chat",
 		format: String,
 		default: null,

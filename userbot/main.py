@@ -1,8 +1,9 @@
 from pyrogram import filters
-from config import app,targets,TEST_CHAT
+from config import app,targets,logs_chat
 from bazar_to_chanell import bazar_to_chanell
 from it_duplicationg import duplicate
 from datetime import datetime
+from settings import log
 
 # def run_telegram_bot():
 print("Bot Started!")
@@ -11,10 +12,13 @@ for target in targets:
   channels.append(target["target"])
 @app.on_message(filters.chat(channels))
 def HandleMessage (client,message):
-  print(datetime,message)
+  log(client,message,"dispatching")
   for target in targets:
     bazar_to_chanell(app,client,message,target)
   duplicate(app,client,message)
+
+
+
 app.run()
 
 
