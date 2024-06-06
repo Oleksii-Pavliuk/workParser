@@ -70,8 +70,8 @@ from config import logs_chat
 #      print(e)
 
 
-def log(client,message,error):
-    client.send_message(logs_chat,str(error) + '\n' + str(message))
+def log(client,message,error = ''):
+  client.send_message(logs_chat,str(error) + '\n' + str(message))
   # return
   # tracer = trace.get_tracer(__name__)
   # span = tracer.start_span("log")

@@ -6,21 +6,33 @@ from datetime import datetime
 from settings import log
 
 # def run_telegram_bot():
-print("Bot Started!")
-channels = []
-for target in targets:
-  channels.append(target["target"])
+channels = [target["target"] for target in targets]
+
+def on_disconnect(client):
+  log(client,"Disconnected")
+
 @app.on_message(filters.chat(channels))
-def HandleMessage (client,message):
-  log(client,message,"dispatching")
+def handle_message(client, message):
+  print(message)
+  log(client,f"Received message: {message.text} \nfrom: {message.chat.title}")
+  processing = False
   for target in targets:
-    bazar_to_chanell(app,client,message,target)
-  duplicate(app,client,message)
+    if message.chat.id == target.get("target") and target.get("chat_duplication",False):
+      log(client,f"Duplicating message: {message.text} \nfrom: {message.chat.title} \nto: {app.get_chat(target.get('send_to')).title}")
+      processing = True
+      duplicate(app, client, message)
+    elif message.chat.id == target.get("target"):
+      log(client,f"Processing message: {message.text} \nfrom: {message.chat.title}")
+      processing = True
+      bazar_to_chanell(app, client, message, target)
+  if not processing:
+    log(client,f"Skipping message from: {message.chat.title}")
 
+def run_telegram_bot():
+  app.run()
 
-
-app.run()
-
+if __name__ == "__main__":
+  run_telegram_bot()
 
 # def run_flask():
 #   # Set helth check with flask
