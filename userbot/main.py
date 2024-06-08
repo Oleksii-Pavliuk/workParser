@@ -8,6 +8,7 @@ from settings import log
 # def run_telegram_bot():
 channels = [target["target"] for target in targets]
 
+@app.on_disconnect()
 def on_disconnect(client):
   log(client,"Disconnected")
 
