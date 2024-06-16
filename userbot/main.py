@@ -21,7 +21,7 @@ def handle_message(client, message):
     if message.chat.id == target.get("target") and target.get("chat_duplication",False):
       log(client,f"Duplicating message: {message.text} \nfrom: {message.chat.title} \nto: {app.get_chat(target.get('send_to')).title}")
       processing = True
-      duplicate(app, client, message)
+      duplicate(app, client, message,target)
     elif message.chat.id == target.get("target"):
       log(client,f"Processing message: {message.text} \nfrom: {message.chat.title}")
       processing = True
