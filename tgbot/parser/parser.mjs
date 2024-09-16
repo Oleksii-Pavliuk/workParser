@@ -101,6 +101,7 @@ export class Parser {
 
 	async AddsJob() {
 		try{
+				customLog(`${this.path.url + this.path.uri} starting parsing`);
 				let htmlContent = await fetchPage(this.path.url+this.path.uri);
 				const dom = new JSDOM(htmlContent).window.document;
 
