@@ -7,15 +7,13 @@ import { fetchPage } from "../common/fetching.mjs";
 
 
 const scrapeAdds = async (document,url) => {
-  let targetClass = '.h3.job-list-item__link';
-  let newTargetClass = '.job-item__title-link'
+  let targetClass = '.l-vacancy a.vt';
 
   let anchors = [...document.querySelectorAll(targetClass)];
-  if(anchors.length == 0) anchors = [...document.querySelectorAll(newTargetClass)];
   let pages = [];
   for (const anchor of anchors) {
-    let htmlContent = await fetchPage(url + anchor.href);
-    if (htmlContent && htmlContent.length) pages.push({[url + anchor.href] : htmlContent})
+    let htmlContent = await fetchPage(anchor.href);
+    if (htmlContent && htmlContent.length) pages.push({[anchor.href] : htmlContent})
   }
 
   // Scrape categories from djinny
@@ -34,7 +32,7 @@ const scrapeAdds = async (document,url) => {
 
 const parseJobs = async (doms) => {
   let adds = []
-  doms?.forEach(async item => {
+  for (const item of doms){
     let jsonObj = {}
     for(const [key,value] of Object.entries(item)) {
       let dom = new JSDOM(value).window.document;
@@ -43,9 +41,9 @@ const parseJobs = async (doms) => {
 
 			if (dom.querySelector('h1') && dom.querySelector('h1').textContent) jsonObj.title = dom.querySelector('h1').childNodes[0].textContent.trim();
 
-      if (dom.querySelector('h1') && dom.querySelector('h1').childNodes[1] && dom.querySelector('h1').childNodes[1].textContent) jsonObj.sallary = dom.querySelector('h1').childNodes[1].textContent.trim();
+      if (dom.querySelector('.salary') && dom.querySelector('.salary').textContent) jsonObj.sallary = dom.querySelector('.salary').textContent.trim();
 
-      if (dom.querySelector('a[href^="/jobs/?company="].job-details--title') && dom.querySelector('a[href^="/jobs/?company="].job-details--title').textContent) jsonObj.employer = dom.querySelector('a[href^="/jobs/?company="].job-details--title').textContent.trim();
+      if (dom.querySelector('.b-compinfo .l-n a') && dom.querySelector('.b-compinfo .l-n a').textContent) jsonObj.employer = dom.querySelector('.b-compinfo .l-n a').textContent.trim();
 
       const location = handleLocation(dom);
       if (location) jsonObj.address = location;
@@ -56,7 +54,7 @@ const parseJobs = async (doms) => {
     }
     let data = parseFromJsonToText(jsonObj);
     if (data) adds.push(data);
-  })
+  }
   return adds;
 }
 
@@ -87,27 +85,17 @@ const parseFromJsonToText = (json) =>{
 }
 
 const handleDescription = (document) => {
-  let div = document.querySelector('header');
+  let div = document.querySelector('.b-typo,.vacancy-section');
   let text = null;
-  if (div) div = div.nextElementSibling;
 
-  if (div) div = div.querySelector('.col-sm-8.row-mobile-order-2');
-
-  if (div) div = div.children[0];
   if (div && div.textContent) text = htmlToText(div.innerHTML, {wordwrap:null});
   return text;
 }
 
 
 const handleLocation = (document) => {
-  let divs = document.querySelectorAll('.job-additional-info--item-text');
-  let text = null;
-  let remote = false;
-  divs.forEach(div => {
-    if (div.querySelector('.location-text') && div.querySelector('.location-text').textContent) text = div.querySelector('.location-text').textContent.replace(/[\s-\n]/g,'');
-    if (div.innerHTML.toLowerCase().includes('remote')) remote = true;
-  })
-  if (remote) text += ' (Remote)';
+  let element = document.querySelectorAll('.place,.bi,.bi-geo-alt-fill');
+  let text = element.textContent || null;
   return text;
 };
 

@@ -61,8 +61,8 @@ const parseJobs = async (doms) => {
 const parseFromJsonToText = (json) =>{
   let text = '';
   let obj = {};
-  if (json.title) text += `<a href="${json.url}"><b>` + json.title + '</b></a>\n';
-  if (json.employer.name) text += '<b>🏢Компанія:</b> ' + json.employer.name;
+	if (json.title) text += `<a href="${json.url}"><b>` + json.title + '</b></a>';
+  if (json.employer) text += '<b>\n🏢Компанія:</b> ' + json.employer;
   if (json.address) text += '<b>\n📍Локація:</b> ' + json.address;
   if (json.sallary) text += '<b>\n💳ЗП:</b> ' + json.sallary;
 

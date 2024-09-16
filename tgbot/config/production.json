@@ -1,22 +1,177 @@
 {
 	"logsFile": "logs.txt",
-	"workUaSchedule": "5 8-20 * * *",
-	"workUaTimezone": "Europe/Kiev",
-	"djinnyCoSchedule": "35 8-20 * * *",
-	"djinnyTimezone": "Europe/Kiev",
 	"botToken": "6460730635:AAFEW8FsoBCCE_Vd7hIYa2ls-Cv_lrxVXl8",
-	"it": "-1001963238259",
-	"remote": "-1001963238259",
+	"devOpsChanelId": "-1002256676107",
+	"itChanelId": "-1001963238259",
 	"logsChat": "-4065832340",
-	"shabashka_odesa": "-1001922863417",
-	"targets":{
-		"djinnyCo": {
-			"url": "https://djinni.co",
-			"uri": "/jobs/?employment=remote"
-		},
-		"workUa": {
-			"url": "https://www.work.ua",
-			"uri": "/jobs-it/"
-		}
+		"parsers":[
+			{
+				"name": "IT djinni parser",
+				"dbName": "IT",
+				"channelId": "-1001963238259",
+				"schedule": "0 8-20 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://djinni.co",
+				"uri": "/jobs/?employment=remote",
+				"scraper": "djinnyCoScrape",
+				"parser": "djinnyCoParse"
+			},
+			{
+				"name": "IT workUa parser",
+				"dbName": "IT",
+				"channelId": "-1001963238259",
+				"schedule": "0 8-20 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://www.work.ua",
+				"uri": "/jobs-it/",
+				"scraper": "workUaScrape",
+				"parser": "workUaParse"
+			},
+			{
+				"name": "DevOps djinni parser no exp",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 6,14 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://djinni.co",
+				"uri": "/jobs/?primary_keyword=DevOps&exp_level=no_exp",
+				"scraper": "djinnyCoScrape",
+				"parser": "djinnyCoParse",
+				"customTag": "intern",
+				"displayImage": "devops-intern.png"
+			},
+
+			{
+				"name": "DevOps djinni parser junior",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 8,16 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://djinni.co",
+				"uri": "/jobs/?all-keywords=junior&primary_keyword=DevOps&keywords=junior",
+				"scraper": "djinnyCoScrape",
+				"parser": "djinnyCoParse",
+				"customTag": "junior",
+				"displayImage": "devops-junior.png"
+			},
+			{
+				"name": "DevOps djinni parser middle",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 10,18 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://djinni.co",
+				"uri": "/jobs/?all-keywords=middle&primary_keyword=DevOps&keywords=middle",
+				"scraper": "djinnyCoScrape",
+				"parser": "djinnyCoParse",
+				"customTag": "middle",
+				"displayImage": "devops-middle.png"
+			},
+			{
+				"name": "DevOps djinni parser senior",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 11,19 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://djinni.co",
+				"uri": "/jobs/?all-keywords=senior&primary_keyword=DevOps&keywords=senior",
+				"scraper": "djinnyCoScrape",
+				"parser": "djinnyCoParse",
+				"customTag": "senior",
+				"displayImage": "devops-senior.png"
+			},
+			{
+				"name": "DevOps djinni parser lead",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 12,20 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://djinni.co",
+				"uri": "/jobs/?all-keywords=lead&primary_keyword=DevOps&keywords=lead",
+				"scraper": "djinnyCoScrape",
+				"parser": "djinnyCoParse",
+				"customTag": "lead",
+				"displayImage": "devops-lead.png"
+			},
+
+
+			{
+				"name": "DevOps dou parser intern",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 12,20 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://jobs.dou.ua",
+				"uri": "/vacancies/?category=DevOps&search=intern",
+				"scraper": "douUaScrape",
+				"parser": "douUaParse",
+				"customTag": "intern",
+				"displayImage": "devops-intern.png"
+			},
+			{
+				"name": "DevOps dou parser trainee",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 12,20 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://jobs.dou.ua",
+				"uri": "/vacancies/?category=DevOps&search=trainee",
+				"scraper": "douUaScrape",
+				"parser": "douUaParse",
+				"customTag": "intern",
+				"displayImage": "devops-intern.png"
+			},
+			{
+				"name": "DevOps dou parser junior",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 11,19 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://jobs.dou.ua",
+				"uri": "/vacancies/?category=DevOps&search=junior",
+				"scraper": "douUaScrape",
+				"parser": "douUaParse",
+				"customTag": "junior",
+				"displayImage": "devops-junior.png"
+			},
+			{
+				"name": "DevOps dou parser middle",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 10,18 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://jobs.dou.ua",
+				"uri": "/vacancies/?category=DevOps&search=middle",
+				"scraper": "douUaScrape",
+				"parser": "douUaParse",
+				"customTag": "middle",
+				"displayImage": "devops-middle.png"
+			},
+			{
+				"name": "DevOps dou parser senior",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 8,16 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://jobs.dou.ua",
+				"uri": "/vacancies/?category=DevOps&search=senior",
+				"scraper": "douUaScrape",
+				"parser": "douUaParse",
+				"customTag": "senior",
+				"displayImage": "devops-senior.png"
+			},
+			{
+				"name": "DevOps dou parser lead",
+				"dbName": "DevOps",
+				"channelId": "-1002256676107",
+				"schedule": "0 6,14 * * *",
+				"timezone": "Europe/Kiev",
+				"url": "https://jobs.dou.ua",
+				"uri": "/vacancies/?category=DevOps&search=lead",
+				"scraper": "douUaScrape",
+				"parser": "douUaParse",
+				"customTag": "lead",
+				"displayImage": "devops-lead.png"
+			}
+		]
 	}
-}

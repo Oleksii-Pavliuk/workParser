@@ -1,22 +1,23 @@
 {
 	"logsFile": "logs.txt",
-	"workUaSchedule": "* * * * *",
-	"workUaTimezone": "Europe/Kiev",
-	"djinnyCoSchedule": "* * * * *",
-	"djinnyTimezone": "Europe/Kiev",
 	"botToken": "6460730635:AAFEW8FsoBCCE_Vd7hIYa2ls-Cv_lrxVXl8",
-	"it": "-1001999061243",
-	"remote": "-1001999061243",
+	"itChanelId": "-1001999061243",
+	"devOpsChanelId": "-1001999061243",
 	"logsChat": "-1001999061243",
-	"shabashka_odesa": "-1001999061243",
-	"targets":{
-		"djinnyCo": {
-			"url": "https://djinni.co",
-			"uri": "/jobs/?employment=remote"
-		},
-		"workUa": {
-			"url": "https://www.work.ua",
-			"uri": "/jobs-it/"
+	"parsers":[
+
+		{
+			"name": "DevOps dou parser middle",
+			"dbName": "DevOps",
+			"channelId": "-1001999061243",
+			"schedule": "* * * * *",
+			"timezone": "Europe/Kiev",
+			"url": "https://jobs.dou.ua",
+			"uri": "/vacancies/?category=DevOps&search=middle",
+			"scraper": "douUaScrape",
+			"parser": "douUaParse",
+			"customTag": "middle",
+			"displayImage": "devops-middle.png"
 		}
-	}
+	]
 }

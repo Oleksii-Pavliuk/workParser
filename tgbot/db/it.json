@@ -1,554 +1,638 @@
 {
-  "SMM": [
-    {
-      "title": "SMM Manager",
-      "tags": [
-        "SMM"
-      ],
-      "url": "https://djinni.co/jobs/607153-smm-manager/",
-      "text": "<a href=\"https://djinni.co/jobs/607153-smm-manager/\"><b>SMM Manager</b></a>\n<b>🏢Компанія:</b> MintyMint<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)<b>\n💳ЗП:</b> $600-700"
-    },
-    {
-      "title": "SMM-менеджер",
-      "tags": [
-        "SMM"
-      ],
-      "url": "https://www.work.ua/jobs/3617083/",
-      "text": "<a href=\"https://www.work.ua/jobs/3617083/\"><b>SMM-менеджер</b></a>\n<b>\n📍Локація:</b> Київ, вулиця Софіївська, 18.<b>\n💳ЗП:</b> За результатами співбесіди"
-    },
-    {
-      "title": "SMM (crypto)",
-      "tags": [
-        "SMM",
-        "Crypto"
-      ],
-      "url": "https://djinni.co/jobs/624316-smm-crypto-/",
-      "text": "<a href=\"https://djinni.co/jobs/624316-smm-crypto-/\"><b>SMM (crypto)</b></a>\n<b>🏢Компанія:</b> altRecipe<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)<b>\n💳ЗП:</b> $1000-1200"
-    }
-  ],
-  "QA": [
-    {
-      "title": "Automation QA with Java",
-      "tags": [
-        "QA",
-        "Java"
-      ],
-      "url": "https://djinni.co/jobs/607148-automation-qa-with-java/",
-      "text": "<a href=\"https://djinni.co/jobs/607148-automation-qa-with-java/\"><b>Automation QA with Java</b></a>\n<b>🏢Компанія:</b> GlobalLogic<b>\n📍Локація:</b> Ukraine (Remote)"
-    },
-    {
-      "title": "Інженер з налагодження та випробувань, Test Engineer у Берегове",
-      "tags": [
-        "QA"
-      ],
-      "url": "https://www.work.ua/jobs/4960672/",
-      "text": "<a href=\"https://www.work.ua/jobs/4960672/\"><b>Інженер з налагодження та випробувань, Test Engineer у Берегове</b></a>\n<b>\n📍Локація:</b> Берегове, шукаємо у Мукачевому"
-    }
-  ],
-  "Java": [
-    {
-      "title": "Automation QA with Java",
-      "tags": [
-        "QA",
-        "Java"
-      ],
-      "url": "https://djinni.co/jobs/607148-automation-qa-with-java/",
-      "text": "<a href=\"https://djinni.co/jobs/607148-automation-qa-with-java/\"><b>Automation QA with Java</b></a>\n<b>🏢Компанія:</b> GlobalLogic<b>\n📍Локація:</b> Ukraine (Remote)"
-    }
-  ],
-  "UI_UX": [
-    {
-      "title": "UI/UX Designer",
-      "tags": [
-        "UI_UX"
-      ],
-      "url": "https://djinni.co/jobs/607147-ui-ux-designer/",
-      "text": "<a href=\"https://djinni.co/jobs/607147-ui-ux-designer/\"><b>UI/UX Designer</b></a>\n<b>🏢Компанія:</b> Shark Software Company<b>\n📍Локація:</b> Ukraine (Remote)"
-    }
-  ],
   "Frontend": [
     {
-      "title": "Middle/Senior Angular Developer for global product (audit and assurance company BIG FOUR)",
-      "tags": [
-        "Frontend",
-        "Angular",
-        "Senior",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/580851-middle-senior-angular-developer-for-global-pr/",
-      "text": "<a href=\"https://djinni.co/jobs/580851-middle-senior-angular-developer-for-global-pr/\"><b>Middle/Senior Angular Developer for global product (audit and assurance company BIG FOUR)</b></a>\n<b>🏢Компанія:</b> Deloitte<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)"
-    },
-    {
-      "title": "Middle JavaScript Developer",
-      "tags": [
-        "Frontend",
-        "JavaScript",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/599164-middle-javascript-developer/",
-      "text": "<a href=\"https://djinni.co/jobs/599164-middle-javascript-developer/\"><b>Middle JavaScript Developer</b></a>\n<b>🏢Компанія:</b> CallsApp UA<b>\n📍Локація:</b> Ukraine (Remote)<b>\n💳ЗП:</b> to $2000"
-    },
-    {
-      "title": "Fullstack JavaScript Developer with Web Scraping",
+      "title": "Full Stack Developer (Laravel + Vue.JS)",
       "tags": [
         "Frontend",
         "Full_Stack",
-        "JavaScript"
-      ],
-      "url": "https://djinni.co/jobs/624321-fullstack-javascript-developer-with-web-scrap/",
-      "text": "<a href=\"https://djinni.co/jobs/624321-fullstack-javascript-developer-with-web-scrap/\"><b>Fullstack JavaScript Developer with Web Scraping</b></a>\n<b>🏢Компанія:</b> SeekIT<b>\n📍Локація:</b> Ukraine (Remote)"
-    },
-    {
-      "title": "SpringBoot and React Invoicing/Audit System Developer and Software Architect",
-      "tags": [
-        "Frontend",
-        "DevOps",
-        "React",
-        "Architect"
-      ],
-      "url": "https://djinni.co/jobs/624318-springboot-and-react-invoicing-audit-system-d/",
-      "text": "<a href=\"https://djinni.co/jobs/624318-springboot-and-react-invoicing-audit-system-d/\"><b>SpringBoot and React Invoicing/Audit System Developer and Software Architect</b></a>\n<b>🏢Компанія:</b> New Wave Devs<b>\n📍Локація:</b> Ukraine (Remote)"
-    },
-    {
-      "title": "Frontend Team Leader",
-      "tags": [
-        "Frontend"
-      ],
-      "url": "https://djinni.co/jobs/595958-frontend-team-leader/",
-      "text": "<a href=\"https://djinni.co/jobs/595958-frontend-team-leader/\"><b>Frontend Team Leader</b></a>\n<b>🏢Компанія:</b> Proxima Research International<b>\n📍Локація:</b> Ukraine (Remote)"
-    }
-  ],
-  "Angular": [
-    {
-      "title": "Middle/Senior Angular Developer for global product (audit and assurance company BIG FOUR)",
-      "tags": [
-        "Frontend",
-        "Angular",
-        "Senior",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/580851-middle-senior-angular-developer-for-global-pr/",
-      "text": "<a href=\"https://djinni.co/jobs/580851-middle-senior-angular-developer-for-global-pr/\"><b>Middle/Senior Angular Developer for global product (audit and assurance company BIG FOUR)</b></a>\n<b>🏢Компанія:</b> Deloitte<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)"
-    }
-  ],
-  "Senior": [
-    {
-      "title": "Middle/Senior Angular Developer for global product (audit and assurance company BIG FOUR)",
-      "tags": [
-        "Frontend",
-        "Angular",
-        "Senior",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/580851-middle-senior-angular-developer-for-global-pr/",
-      "text": "<a href=\"https://djinni.co/jobs/580851-middle-senior-angular-developer-for-global-pr/\"><b>Middle/Senior Angular Developer for global product (audit and assurance company BIG FOUR)</b></a>\n<b>🏢Компанія:</b> Deloitte<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)"
-    },
-    {
-      "title": "Middle/Senior SEO-спеціаліст",
-      "tags": [
-        "SEO",
-        "Senior",
-        "Middle"
-      ],
-      "url": "https://www.work.ua/jobs/5411531/",
-      "text": "<a href=\"https://www.work.ua/jobs/5411531/\"><b>Middle/Senior SEO-спеціаліст</b></a>\n<b>\n💳ЗП:</b> За результатом співбесіди"
-    }
-  ],
-  "Middle": [
-    {
-      "title": "Middle/Senior Angular Developer for global product (audit and assurance company BIG FOUR)",
-      "tags": [
-        "Frontend",
-        "Angular",
-        "Senior",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/580851-middle-senior-angular-developer-for-global-pr/",
-      "text": "<a href=\"https://djinni.co/jobs/580851-middle-senior-angular-developer-for-global-pr/\"><b>Middle/Senior Angular Developer for global product (audit and assurance company BIG FOUR)</b></a>\n<b>🏢Компанія:</b> Deloitte<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)"
-    },
-    {
-      "title": "Middle IT Sales Manager (Game)",
-      "tags": [
-        "Game_Dev",
-        "Sales",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/607145-middle-it-sales-manager-game-/",
-      "text": "<a href=\"https://djinni.co/jobs/607145-middle-it-sales-manager-game-/\"><b>Middle IT Sales Manager (Game)</b></a>\n<b>🏢Компанія:</b> QATestLab<b>\n📍Локація:</b> Ukraine (Remote)"
-    },
-    {
-      "title": "Middle/Senior SEO-спеціаліст",
-      "tags": [
-        "SEO",
-        "Senior",
-        "Middle"
-      ],
-      "url": "https://www.work.ua/jobs/5411531/",
-      "text": "<a href=\"https://www.work.ua/jobs/5411531/\"><b>Middle/Senior SEO-спеціаліст</b></a>\n<b>\n💳ЗП:</b> За результатом співбесіди"
-    },
-    {
-      "title": "Middle C++ engineer (Linux)",
-      "tags": [
-        "C",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/624326-middle-c-engineer-linux-/",
-      "text": "<a href=\"https://djinni.co/jobs/624326-middle-c-engineer-linux-/\"><b>Middle C++ engineer (Linux)</b></a>\n<b>🏢Компанія:</b> GlobalLogic<b>\n📍Локація:</b> Ukraine(Kyiv,Lviv,Mykolaiv,Kharkiv) (Remote)"
-    },
-    {
-      "title": "Middle JavaScript Developer",
-      "tags": [
-        "Frontend",
+        "Vue",
         "JavaScript",
+        "PHP"
+      ],
+      "url": "https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list\"><b>Full Stack Developer (Laravel + Vue.JS)</b></a>\n<b>🏢Компанія:</b> BBE Marketing"
+    },
+    {
+      "title": "Senior Frontend Developer (Vue)",
+      "tags": [
+        "Frontend",
+        "Vue",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/664247-senior-frontend-developer-vue-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/664247-senior-frontend-developer-vue-/?from=list\"><b>Senior Frontend Developer (Vue)</b></a>\n<b>🏢Компанія:</b> QuickChain<b>\n💳ЗП:</b> to $4500"
+    },
+    {
+      "title": "CTO - React Mobile Developper",
+      "tags": [
+        "Frontend",
+        "React"
+      ],
+      "url": "https://djinni.co/jobs/680330-cto-react-mobile-developper/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680330-cto-react-mobile-developper/?from=list\"><b>CTO - React Mobile Developper</b></a>\n<b>🏢Компанія:</b> Skarbify"
+    },
+    {
+      "title": "Senior developer  Vue.js",
+      "tags": [
+        "Frontend",
+        "Vue",
+        "JavaScript",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680343-senior-developer-vue-js/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680343-senior-developer-vue-js/?from=list\"><b>Senior developer  Vue.js</b></a>\n<b>🏢Компанія:</b> Aiscreen"
+    },
+    {
+      "title": "Middle Frontend Developer( React)",
+      "tags": [
+        "Frontend",
+        "React",
         "Middle"
       ],
-      "url": "https://djinni.co/jobs/599164-middle-javascript-developer/",
-      "text": "<a href=\"https://djinni.co/jobs/599164-middle-javascript-developer/\"><b>Middle JavaScript Developer</b></a>\n<b>🏢Компанія:</b> CallsApp UA<b>\n📍Локація:</b> Ukraine (Remote)<b>\n💳ЗП:</b> to $2000"
-    }
-  ],
-  "HR": [
-    {
-      "title": "HR Manager",
-      "tags": [
-        "HR"
-      ],
-      "url": "https://djinni.co/jobs/599007-hr-manager/",
-      "text": "<a href=\"https://djinni.co/jobs/599007-hr-manager/\"><b>HR Manager</b></a>\n<b>🏢Компанія:</b> Leadsdoit<b>\n📍Локація:</b> Poland (Remote)"
-    }
-  ],
-  "Database": [
-    {
-      "title": "Data Engineer",
-      "tags": [
-        "Database"
-      ],
-      "url": "https://djinni.co/jobs/599472-data-engineer/",
-      "text": "<a href=\"https://djinni.co/jobs/599472-data-engineer/\"><b>Data Engineer</b></a>\n<b>🏢Компанія:</b> AUTODOC<b>\n📍Локація:</b> Ukraine(Kyiv,Odesa) (Remote)"
-    }
-  ],
-  "Lead": [
-    {
-      "title": "Team Lead Software Engineering",
-      "tags": [
-        "Lead"
-      ],
-      "url": "https://djinni.co/jobs/598958-team-lead-software-engineering/",
-      "text": "<a href=\"https://djinni.co/jobs/598958-team-lead-software-engineering/\"><b>Team Lead Software Engineering</b></a>\n<b>🏢Компанія:</b> AUTODOC<b>\n📍Локація:</b> Ukraine(Kyiv,Odesa) (Remote)"
-    },
-    {
-      "title": "Cloud Architect and Team Lead",
-      "tags": [
-        "DevOps",
-        "Lead",
-        "Architect"
-      ],
-      "url": "https://djinni.co/jobs/624317-cloud-architect-and-team-lead/",
-      "text": "<a href=\"https://djinni.co/jobs/624317-cloud-architect-and-team-lead/\"><b>Cloud Architect and Team Lead</b></a>\n<b>🏢Компанія:</b> Clario<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)"
-    }
-  ],
-  "Game_Dev": [
-    {
-      "title": "Middle IT Sales Manager (Game)",
-      "tags": [
-        "Game_Dev",
-        "Sales",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/607145-middle-it-sales-manager-game-/",
-      "text": "<a href=\"https://djinni.co/jobs/607145-middle-it-sales-manager-game-/\"><b>Middle IT Sales Manager (Game)</b></a>\n<b>🏢Компанія:</b> QATestLab<b>\n📍Локація:</b> Ukraine (Remote)"
-    }
-  ],
-  "Sales": [
-    {
-      "title": "Middle IT Sales Manager (Game)",
-      "tags": [
-        "Game_Dev",
-        "Sales",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/607145-middle-it-sales-manager-game-/",
-      "text": "<a href=\"https://djinni.co/jobs/607145-middle-it-sales-manager-game-/\"><b>Middle IT Sales Manager (Game)</b></a>\n<b>🏢Компанія:</b> QATestLab<b>\n📍Локація:</b> Ukraine (Remote)"
-    },
-    {
-      "title": "Sales Manager (UpWork)",
-      "tags": [
-        "Sales"
-      ],
-      "url": "https://djinni.co/jobs/599241-sales-manager-upwork-/",
-      "text": "<a href=\"https://djinni.co/jobs/599241-sales-manager-upwork-/\"><b>Sales Manager (UpWork)</b></a>\n<b>🏢Компанія:</b> Peiko<b>\n📍Локація:</b> Ukraine (Remote)"
-    }
-  ],
-  "SEO": [
-    {
-      "title": "Middle/Senior SEO-спеціаліст",
-      "tags": [
-        "SEO",
-        "Senior",
-        "Middle"
-      ],
-      "url": "https://www.work.ua/jobs/5411531/",
-      "text": "<a href=\"https://www.work.ua/jobs/5411531/\"><b>Middle/Senior SEO-спеціаліст</b></a>\n<b>\n💳ЗП:</b> За результатом співбесіди"
-    },
-    {
-      "title": "Таргетолог",
-      "tags": [
-        "SEO"
-      ],
-      "url": "https://www.work.ua/jobs/5229764/",
-      "text": "<a href=\"https://www.work.ua/jobs/5229764/\"><b>Таргетолог</b></a>\n<b>\n📍Локація:</b> Київ, вулиця Саперно-Слобідська, 22.<b>\n💳ЗП:</b> 30 000 грн"
-    },
-    {
-      "title": "Інтернет-маркетолог",
-      "tags": [
-        "SEO"
-      ],
-      "url": "https://www.work.ua/jobs/5454842/",
-      "text": "<a href=\"https://www.work.ua/jobs/5454842/\"><b>Інтернет-маркетолог</b></a>\n<b>\n📍Локація:</b> Київ, вулиця Академіка Булаховського, 5."
-    },
-    {
-      "title": "Інтернет-маркетолог",
-      "tags": [
-        "SEO"
-      ],
-      "url": "https://www.work.ua/jobs/2091115/",
-      "text": "<a href=\"https://www.work.ua/jobs/2091115/\"><b>Інтернет-маркетолог</b></a>\n<b>\n💳ЗП:</b> 20 000 – 30 000 грн"
-    }
-  ],
-  "Content_Manager": [
-    {
-      "title": "Content Manager, Outreach Specialist",
-      "tags": [
-        "Content_Manager",
-        "Link_Builder"
-      ],
-      "url": "https://www.work.ua/jobs/5188431/",
-      "text": "<a href=\"https://www.work.ua/jobs/5188431/\"><b>Content Manager, Outreach Specialist</b></a>\n<b>\n📍Локація:</b> Дніпро, проспект Дмитра Яворницького, 72.<b>\n💳ЗП:</b> 25 000 – 50 000 грн"
-    },
-    {
-      "title": "Контент-менеджер в інтернет-магазин",
-      "tags": [
-        "Content_Manager"
-      ],
-      "url": "https://www.work.ua/jobs/5475194/",
-      "text": "<a href=\"https://www.work.ua/jobs/5475194/\"><b>Контент-менеджер в інтернет-магазин</b></a>\n<b>\n📍Локація:</b> Київ, проспект Степана Бандери, 21.<b>\n💳ЗП:</b> 17 000 грн"
-    },
-    {
-      "title": "Контент-менеджер",
-      "tags": [
-        "Content_Manager"
-      ],
-      "url": "https://www.work.ua/jobs/5388135/",
-      "text": "<a href=\"https://www.work.ua/jobs/5388135/\"><b>Контент-менеджер</b></a>\n<b>\n📍Локація:</b> Рівне, вулиця Академіка Грушевського, 28.<b>\n💳ЗП:</b> 14 000 – 16 000 грн"
-    }
-  ],
-  "Link_Builder": [
-    {
-      "title": "Content Manager, Outreach Specialist",
-      "tags": [
-        "Content_Manager",
-        "Link_Builder"
-      ],
-      "url": "https://www.work.ua/jobs/5188431/",
-      "text": "<a href=\"https://www.work.ua/jobs/5188431/\"><b>Content Manager, Outreach Specialist</b></a>\n<b>\n📍Локація:</b> Дніпро, проспект Дмитра Яворницького, 72.<b>\n💳ЗП:</b> 25 000 – 50 000 грн"
-    }
-  ],
-  "C": [
-    {
-      "title": "Middle C++ engineer (Linux)",
-      "tags": [
-        "C",
-        "Middle"
-      ],
-      "url": "https://djinni.co/jobs/624326-middle-c-engineer-linux-/",
-      "text": "<a href=\"https://djinni.co/jobs/624326-middle-c-engineer-linux-/\"><b>Middle C++ engineer (Linux)</b></a>\n<b>🏢Компанія:</b> GlobalLogic<b>\n📍Локація:</b> Ukraine(Kyiv,Lviv,Mykolaiv,Kharkiv) (Remote)"
-    }
-  ],
-  "Project_Manager": [
-    {
-      "title": "Project manager",
-      "tags": [
-        "Project_Manager"
-      ],
-      "url": "https://djinni.co/jobs/359689-project-manager/",
-      "text": "<a href=\"https://djinni.co/jobs/359689-project-manager/\"><b>Project manager</b></a>\n<b>🏢Компанія:</b> FixIQ<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)<b>\n💳ЗП:</b> from $1000"
-    }
-  ],
-  "Web_Developer": [
-    {
-      "title": "ASP.NET Full Stack Web Developer",
-      "tags": [
-        "Web_Developer",
-        "Full_Stack"
-      ],
-      "url": "https://djinni.co/jobs/371534-asp-net-full-stack-web-developer/",
-      "text": "<a href=\"https://djinni.co/jobs/371534-asp-net-full-stack-web-developer/\"><b>ASP.NET Full Stack Web Developer</b></a>\n<b>🏢Компанія:</b> Engineered IT<b>\n📍Локація:</b> Ukraine,UnitedStates (Remote)<b>\n💳ЗП:</b> $2500-4000"
+      "url": "https://djinni.co/jobs/673626-middle-frontend-developer-react-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/673626-middle-frontend-developer-react-/?from=list\"><b>Middle Frontend Developer( React)</b></a>\n<b>🏢Компанія:</b> BOMI"
     }
   ],
   "Full_Stack": [
     {
-      "title": "ASP.NET Full Stack Web Developer",
-      "tags": [
-        "Web_Developer",
-        "Full_Stack"
-      ],
-      "url": "https://djinni.co/jobs/371534-asp-net-full-stack-web-developer/",
-      "text": "<a href=\"https://djinni.co/jobs/371534-asp-net-full-stack-web-developer/\"><b>ASP.NET Full Stack Web Developer</b></a>\n<b>🏢Компанія:</b> Engineered IT<b>\n📍Локація:</b> Ukraine,UnitedStates (Remote)<b>\n💳ЗП:</b> $2500-4000"
-    },
-    {
-      "title": "Fullstack JavaScript Developer with Web Scraping",
+      "title": "Full Stack Developer (Laravel + Vue.JS)",
       "tags": [
         "Frontend",
         "Full_Stack",
-        "JavaScript"
+        "Vue",
+        "JavaScript",
+        "PHP"
       ],
-      "url": "https://djinni.co/jobs/624321-fullstack-javascript-developer-with-web-scrap/",
-      "text": "<a href=\"https://djinni.co/jobs/624321-fullstack-javascript-developer-with-web-scrap/\"><b>Fullstack JavaScript Developer with Web Scraping</b></a>\n<b>🏢Компанія:</b> SeekIT<b>\n📍Локація:</b> Ukraine (Remote)"
+      "url": "https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list\"><b>Full Stack Developer (Laravel + Vue.JS)</b></a>\n<b>🏢Компанія:</b> BBE Marketing"
     },
     {
-      "title": "Fullstack JavaScript Trainee",
+      "title": "Full-Stack Developer Team Lead",
       "tags": [
-        "Junior",
+        "Full_Stack",
+        "Lead"
+      ],
+      "url": "https://djinni.co/jobs/680338-full-stack-developer-team-lead/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680338-full-stack-developer-team-lead/?from=list\"><b>Full-Stack Developer Team Lead</b></a>\n<b>🏢Компанія:</b> Develux"
+    },
+    {
+      "title": "Senior Full Stack Engineer",
+      "tags": [
+        "Full_Stack",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680336-senior-full-stack-engineer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680336-senior-full-stack-engineer/?from=list\"><b>Senior Full Stack Engineer</b></a>\n<b>🏢Компанія:</b> Commit Offshore"
+    },
+    {
+      "title": "SaaS Oriented Full-Stack Developer (Python/Django, JS)",
+      "tags": [
+        "Backend",
         "Full_Stack",
         "JavaScript"
       ],
-      "url": "https://djinni.co/jobs/624314-fullstack-javascript-trainee/",
-      "text": "<a href=\"https://djinni.co/jobs/624314-fullstack-javascript-trainee/\"><b>Fullstack JavaScript Trainee</b></a>\n<b>🏢Компанія:</b> SmartIoT<b>\n📍Локація:</b> Ukraine (Remote)"
+      "url": "https://djinni.co/jobs/663746-saas-oriented-full-stack-developer-python-dja/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/663746-saas-oriented-full-stack-developer-python-dja/?from=list\"><b>SaaS Oriented Full-Stack Developer (Python/Django, JS)</b></a>\n<b>🏢Компанія:</b> TimelinesAI(part of Initech group)"
+    }
+  ],
+  "Vue": [
+    {
+      "title": "Full Stack Developer (Laravel + Vue.JS)",
+      "tags": [
+        "Frontend",
+        "Full_Stack",
+        "Vue",
+        "JavaScript",
+        "PHP"
+      ],
+      "url": "https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list\"><b>Full Stack Developer (Laravel + Vue.JS)</b></a>\n<b>🏢Компанія:</b> BBE Marketing"
+    },
+    {
+      "title": "Senior Frontend Developer (Vue)",
+      "tags": [
+        "Frontend",
+        "Vue",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/664247-senior-frontend-developer-vue-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/664247-senior-frontend-developer-vue-/?from=list\"><b>Senior Frontend Developer (Vue)</b></a>\n<b>🏢Компанія:</b> QuickChain<b>\n💳ЗП:</b> to $4500"
+    },
+    {
+      "title": "Senior developer  Vue.js",
+      "tags": [
+        "Frontend",
+        "Vue",
+        "JavaScript",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680343-senior-developer-vue-js/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680343-senior-developer-vue-js/?from=list\"><b>Senior developer  Vue.js</b></a>\n<b>🏢Компанія:</b> Aiscreen"
     }
   ],
   "JavaScript": [
     {
-      "title": "Middle JavaScript Developer",
+      "title": "Full Stack Developer (Laravel + Vue.JS)",
       "tags": [
         "Frontend",
+        "Full_Stack",
+        "Vue",
+        "JavaScript",
+        "PHP"
+      ],
+      "url": "https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list\"><b>Full Stack Developer (Laravel + Vue.JS)</b></a>\n<b>🏢Компанія:</b> BBE Marketing"
+    },
+    {
+      "title": "SaaS Oriented Full-Stack Developer (Python/Django, JS)",
+      "tags": [
+        "Backend",
+        "Full_Stack",
+        "JavaScript"
+      ],
+      "url": "https://djinni.co/jobs/663746-saas-oriented-full-stack-developer-python-dja/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/663746-saas-oriented-full-stack-developer-python-dja/?from=list\"><b>SaaS Oriented Full-Stack Developer (Python/Django, JS)</b></a>\n<b>🏢Компанія:</b> TimelinesAI(part of Initech group)"
+    },
+    {
+      "title": "Senior developer  Vue.js",
+      "tags": [
+        "Frontend",
+        "Vue",
+        "JavaScript",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680343-senior-developer-vue-js/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680343-senior-developer-vue-js/?from=list\"><b>Senior developer  Vue.js</b></a>\n<b>🏢Компанія:</b> Aiscreen"
+    },
+    {
+      "title": "Middle Backend developer (Node.js)",
+      "tags": [
+        "Backend",
         "JavaScript",
         "Middle"
       ],
-      "url": "https://djinni.co/jobs/599164-middle-javascript-developer/",
-      "text": "<a href=\"https://djinni.co/jobs/599164-middle-javascript-developer/\"><b>Middle JavaScript Developer</b></a>\n<b>🏢Компанія:</b> CallsApp UA<b>\n📍Локація:</b> Ukraine (Remote)<b>\n💳ЗП:</b> to $2000"
-    },
+      "url": "https://djinni.co/jobs/680339-middle-backend-developer-node-js-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680339-middle-backend-developer-node-js-/?from=list\"><b>Middle Backend developer (Node.js)</b></a>\n<b>🏢Компанія:</b> BOMI"
+    }
+  ],
+  "PHP": [
     {
-      "title": "Fullstack JavaScript Developer with Web Scraping",
+      "title": "Full Stack Developer (Laravel + Vue.JS)",
       "tags": [
         "Frontend",
         "Full_Stack",
-        "JavaScript"
+        "Vue",
+        "JavaScript",
+        "PHP"
       ],
-      "url": "https://djinni.co/jobs/624321-fullstack-javascript-developer-with-web-scrap/",
-      "text": "<a href=\"https://djinni.co/jobs/624321-fullstack-javascript-developer-with-web-scrap/\"><b>Fullstack JavaScript Developer with Web Scraping</b></a>\n<b>🏢Компанія:</b> SeekIT<b>\n📍Локація:</b> Ukraine (Remote)"
+      "url": "https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680347-full-stack-developer-laravel-vue-js-/?from=list\"><b>Full Stack Developer (Laravel + Vue.JS)</b></a>\n<b>🏢Компанія:</b> BBE Marketing"
+    }
+  ],
+  "HR": [
+    {
+      "title": "Technical Recruiter and HR Specialist",
+      "tags": [
+        "HR"
+      ],
+      "url": "https://djinni.co/jobs/680345-technical-recruiter-and-hr-specialist/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680345-technical-recruiter-and-hr-specialist/?from=list\"><b>Technical Recruiter and HR Specialist</b></a>\n<b>🏢Компанія:</b> DanaCore<b>\n💳ЗП:</b> to $2000"
+    }
+  ],
+  "Senior": [
+    {
+      "title": "Senior Creative Marketing Specialist",
+      "tags": [
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/664242-senior-creative-marketing-specialist/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/664242-senior-creative-marketing-specialist/?from=list\"><b>Senior Creative Marketing Specialist</b></a>\n<b>🏢Компанія:</b> QuickChain<b>\n💳ЗП:</b> to $3500"
     },
     {
-      "title": "Fullstack JavaScript Trainee",
-      "tags": [
-        "Junior",
-        "Full_Stack",
-        "JavaScript"
-      ],
-      "url": "https://djinni.co/jobs/624314-fullstack-javascript-trainee/",
-      "text": "<a href=\"https://djinni.co/jobs/624314-fullstack-javascript-trainee/\"><b>Fullstack JavaScript Trainee</b></a>\n<b>🏢Компанія:</b> SmartIoT<b>\n📍Локація:</b> Ukraine (Remote)"
-    }
-  ],
-  "DevOps": [
-    {
-      "title": "SpringBoot and React Invoicing/Audit System Developer and Software Architect",
-      "tags": [
-        "Frontend",
-        "DevOps",
-        "React",
-        "Architect"
-      ],
-      "url": "https://djinni.co/jobs/624318-springboot-and-react-invoicing-audit-system-d/",
-      "text": "<a href=\"https://djinni.co/jobs/624318-springboot-and-react-invoicing-audit-system-d/\"><b>SpringBoot and React Invoicing/Audit System Developer and Software Architect</b></a>\n<b>🏢Компанія:</b> New Wave Devs<b>\n📍Локація:</b> Ukraine (Remote)"
-    },
-    {
-      "title": "Cloud Architect and Team Lead",
-      "tags": [
-        "DevOps",
-        "Lead",
-        "Architect"
-      ],
-      "url": "https://djinni.co/jobs/624317-cloud-architect-and-team-lead/",
-      "text": "<a href=\"https://djinni.co/jobs/624317-cloud-architect-and-team-lead/\"><b>Cloud Architect and Team Lead</b></a>\n<b>🏢Компанія:</b> Clario<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)"
-    }
-  ],
-  "React": [
-    {
-      "title": "SpringBoot and React Invoicing/Audit System Developer and Software Architect",
-      "tags": [
-        "Frontend",
-        "DevOps",
-        "React",
-        "Architect"
-      ],
-      "url": "https://djinni.co/jobs/624318-springboot-and-react-invoicing-audit-system-d/",
-      "text": "<a href=\"https://djinni.co/jobs/624318-springboot-and-react-invoicing-audit-system-d/\"><b>SpringBoot and React Invoicing/Audit System Developer and Software Architect</b></a>\n<b>🏢Компанія:</b> New Wave Devs<b>\n📍Локація:</b> Ukraine (Remote)"
-    }
-  ],
-  "Architect": [
-    {
-      "title": "SpringBoot and React Invoicing/Audit System Developer and Software Architect",
-      "tags": [
-        "Frontend",
-        "DevOps",
-        "React",
-        "Architect"
-      ],
-      "url": "https://djinni.co/jobs/624318-springboot-and-react-invoicing-audit-system-d/",
-      "text": "<a href=\"https://djinni.co/jobs/624318-springboot-and-react-invoicing-audit-system-d/\"><b>SpringBoot and React Invoicing/Audit System Developer and Software Architect</b></a>\n<b>🏢Компанія:</b> New Wave Devs<b>\n📍Локація:</b> Ukraine (Remote)"
-    },
-    {
-      "title": "Cloud Architect and Team Lead",
-      "tags": [
-        "DevOps",
-        "Lead",
-        "Architect"
-      ],
-      "url": "https://djinni.co/jobs/624317-cloud-architect-and-team-lead/",
-      "text": "<a href=\"https://djinni.co/jobs/624317-cloud-architect-and-team-lead/\"><b>Cloud Architect and Team Lead</b></a>\n<b>🏢Компанія:</b> Clario<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)"
-    }
-  ],
-  "Crypto": [
-    {
-      "title": "SMM (crypto)",
+      "title": "Senior SMM Specialist (AI Content and Guerilla Strategies)",
       "tags": [
         "SMM",
-        "Crypto"
+        "Senior"
       ],
-      "url": "https://djinni.co/jobs/624316-smm-crypto-/",
-      "text": "<a href=\"https://djinni.co/jobs/624316-smm-crypto-/\"><b>SMM (crypto)</b></a>\n<b>🏢Компанія:</b> altRecipe<b>\n📍Локація:</b> Ukraine(Kyiv) (Remote)<b>\n💳ЗП:</b> $1000-1200"
-    }
-  ],
-  "Android": [
+      "url": "https://djinni.co/jobs/664238-senior-smm-specialist-ai-content-and-guerilla/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/664238-senior-smm-specialist-ai-content-and-guerilla/?from=list\"><b>Senior SMM Specialist (AI Content and Guerilla Strategies)</b></a>\n<b>🏢Компанія:</b> QuickChain<b>\n💳ЗП:</b> to $3000"
+    },
     {
-      "title": "Android Engineer (AI apps)",
+      "title": "Senior SEO/ASO AI Enthusiast",
+      "tags": [
+        "SEO",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/664211-senior-seo-aso-ai-enthusiast/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/664211-senior-seo-aso-ai-enthusiast/?from=list\"><b>Senior SEO/ASO AI Enthusiast</b></a>\n<b>🏢Компанія:</b> QuickChain<b>\n💳ЗП:</b> to $3500"
+    },
+    {
+      "title": "Senior Frontend Developer (Vue)",
+      "tags": [
+        "Frontend",
+        "Vue",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/664247-senior-frontend-developer-vue-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/664247-senior-frontend-developer-vue-/?from=list\"><b>Senior Frontend Developer (Vue)</b></a>\n<b>🏢Компанія:</b> QuickChain<b>\n💳ЗП:</b> to $4500"
+    },
+    {
+      "title": "Senior IOS and Android Developer",
       "tags": [
         "Android",
-        "Mobile"
+        "iOS",
+        "Mobile",
+        "Senior"
       ],
-      "url": "https://djinni.co/jobs/624315-android-engineer-ai-apps-/",
-      "text": "<a href=\"https://djinni.co/jobs/624315-android-engineer-ai-apps-/\"><b>Android Engineer (AI apps)</b></a>\n<b>🏢Компанія:</b> AI DATAVERSE<b>\n📍Локація:</b> Poland (Remote)"
+      "url": "https://djinni.co/jobs/680342-senior-ios-and-android-developer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680342-senior-ios-and-android-developer/?from=list\"><b>Senior IOS and Android Developer</b></a>\n<b>🏢Компанія:</b> Null-Edge"
+    },
+    {
+      "title": "Senior SEO Manager for Rental Portal in 15 markets",
+      "tags": [
+        "SEO",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680337-senior-seo-manager-for-rental-portal-in-15-ma/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680337-senior-seo-manager-for-rental-portal-in-15-ma/?from=list\"><b>Senior SEO Manager for Rental Portal in 15 markets</b></a>\n<b>🏢Компанія:</b> Online Minds"
+    },
+    {
+      "title": "Senior Full Stack Engineer",
+      "tags": [
+        "Full_Stack",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680336-senior-full-stack-engineer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680336-senior-full-stack-engineer/?from=list\"><b>Senior Full Stack Engineer</b></a>\n<b>🏢Компанія:</b> Commit Offshore"
+    },
+    {
+      "title": "Senior developer  Vue.js",
+      "tags": [
+        "Frontend",
+        "Vue",
+        "JavaScript",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680343-senior-developer-vue-js/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680343-senior-developer-vue-js/?from=list\"><b>Senior developer  Vue.js</b></a>\n<b>🏢Компанія:</b> Aiscreen"
     }
   ],
-  "Mobile": [
+  "SMM": [
     {
-      "title": "Android Engineer (AI apps)",
+      "title": "Senior SMM Specialist (AI Content and Guerilla Strategies)",
       "tags": [
-        "Android",
-        "Mobile"
+        "SMM",
+        "Senior"
       ],
-      "url": "https://djinni.co/jobs/624315-android-engineer-ai-apps-/",
-      "text": "<a href=\"https://djinni.co/jobs/624315-android-engineer-ai-apps-/\"><b>Android Engineer (AI apps)</b></a>\n<b>🏢Компанія:</b> AI DATAVERSE<b>\n📍Локація:</b> Poland (Remote)"
+      "url": "https://djinni.co/jobs/664238-senior-smm-specialist-ai-content-and-guerilla/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/664238-senior-smm-specialist-ai-content-and-guerilla/?from=list\"><b>Senior SMM Specialist (AI Content and Guerilla Strategies)</b></a>\n<b>🏢Компанія:</b> QuickChain<b>\n💳ЗП:</b> to $3000"
+    },
+    {
+      "title": "SMM manager, копірайтер, акаунт-менеджер",
+      "tags": [
+        "SMM"
+      ],
+      "url": "https://www.work.ua/jobs/5301322/",
+      "text": "<a href=\"https://www.work.ua/jobs/5301322/\"><b>SMM manager, копірайтер, акаунт-менеджер</b></a>\n<b>\n📍Локація:</b> Харків, вулиця Отакара Яроша, 20.<b>\n💳ЗП:</b> 20 000 – 40 000 грн"
+    },
+    {
+      "title": "SMM manager зі знанням англійської мови",
+      "tags": [
+        "SMM"
+      ],
+      "url": "https://www.work.ua/jobs/5668365/",
+      "text": "<a href=\"https://www.work.ua/jobs/5668365/\"><b>SMM manager зі знанням англійської мови</b></a>\n<b>\n📍Локація:</b> Львів<b>\n💳ЗП:</b> 35 000 – 40 000 грн"
+    }
+  ],
+  "SEO": [
+    {
+      "title": "Senior SEO/ASO AI Enthusiast",
+      "tags": [
+        "SEO",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/664211-senior-seo-aso-ai-enthusiast/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/664211-senior-seo-aso-ai-enthusiast/?from=list\"><b>Senior SEO/ASO AI Enthusiast</b></a>\n<b>🏢Компанія:</b> QuickChain<b>\n💳ЗП:</b> to $3500"
+    },
+    {
+      "title": "Senior SEO Manager for Rental Portal in 15 markets",
+      "tags": [
+        "SEO",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680337-senior-seo-manager-for-rental-portal-in-15-ma/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680337-senior-seo-manager-for-rental-portal-in-15-ma/?from=list\"><b>Senior SEO Manager for Rental Portal in 15 markets</b></a>\n<b>🏢Компанія:</b> Online Minds"
+    },
+    {
+      "title": "SEO-specialist",
+      "tags": [
+        "SEO"
+      ],
+      "url": "https://djinni.co/jobs/680351-seo-specialist/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680351-seo-specialist/?from=list\"><b>SEO-specialist</b></a>\n<b>🏢Компанія:</b> AD MEDIA PROFIT"
+    },
+    {
+      "title": "Executive Data(BI)/Web Analyst- Gambling",
+      "tags": [
+        "SEO"
+      ],
+      "url": "https://djinni.co/jobs/680359-executive-data-bi-web-analyst-gambling/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680359-executive-data-bi-web-analyst-gambling/?from=list\"><b>Executive Data(BI)/Web Analyst- Gambling</b></a>\n<b>🏢Компанія:</b> NewGMedia"
+    }
+  ],
+  "UI_UX": [
+    {
+      "title": "Junior UI/UX Designer",
+      "tags": [
+        "UI_UX",
+        "Junior"
+      ],
+      "url": "https://djinni.co/jobs/680344-junior-ui-ux-designer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680344-junior-ui-ux-designer/?from=list\"><b>Junior UI/UX Designer</b></a>\n<b>🏢Компанія:</b> AdriStars Consulting"
     }
   ],
   "Junior": [
     {
-      "title": "Fullstack JavaScript Trainee",
+      "title": "Junior UI/UX Designer",
       "tags": [
-        "Junior",
+        "UI_UX",
+        "Junior"
+      ],
+      "url": "https://djinni.co/jobs/680344-junior-ui-ux-designer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680344-junior-ui-ux-designer/?from=list\"><b>Junior UI/UX Designer</b></a>\n<b>🏢Компанія:</b> AdriStars Consulting"
+    }
+  ],
+  "Android": [
+    {
+      "title": "Senior IOS and Android Developer",
+      "tags": [
+        "Android",
+        "iOS",
+        "Mobile",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680342-senior-ios-and-android-developer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680342-senior-ios-and-android-developer/?from=list\"><b>Senior IOS and Android Developer</b></a>\n<b>🏢Компанія:</b> Null-Edge"
+    }
+  ],
+  "iOS": [
+    {
+      "title": "Senior IOS and Android Developer",
+      "tags": [
+        "Android",
+        "iOS",
+        "Mobile",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680342-senior-ios-and-android-developer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680342-senior-ios-and-android-developer/?from=list\"><b>Senior IOS and Android Developer</b></a>\n<b>🏢Компанія:</b> Null-Edge"
+    }
+  ],
+  "Mobile": [
+    {
+      "title": "Senior IOS and Android Developer",
+      "tags": [
+        "Android",
+        "iOS",
+        "Mobile",
+        "Senior"
+      ],
+      "url": "https://djinni.co/jobs/680342-senior-ios-and-android-developer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680342-senior-ios-and-android-developer/?from=list\"><b>Senior IOS and Android Developer</b></a>\n<b>🏢Компанія:</b> Null-Edge"
+    }
+  ],
+  "Middle": [
+    {
+      "title": "Middle Drupal Developer",
+      "tags": [
+        "Middle"
+      ],
+      "url": "https://djinni.co/jobs/680341-middle-drupal-developer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680341-middle-drupal-developer/?from=list\"><b>Middle Drupal Developer</b></a>\n<b>🏢Компанія:</b> Loft Soft"
+    },
+    {
+      "title": "Middle+ Manual/Auto QA Engineer",
+      "tags": [
+        "QA",
+        "Middle"
+      ],
+      "url": "https://djinni.co/jobs/680340-middle-manual-auto-qa-engineer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680340-middle-manual-auto-qa-engineer/?from=list\"><b>Middle+ Manual/Auto QA Engineer</b></a>\n<b>🏢Компанія:</b> JustCoded"
+    },
+    {
+      "title": "Middle Frontend Developer( React)",
+      "tags": [
+        "Frontend",
+        "React",
+        "Middle"
+      ],
+      "url": "https://djinni.co/jobs/673626-middle-frontend-developer-react-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/673626-middle-frontend-developer-react-/?from=list\"><b>Middle Frontend Developer( React)</b></a>\n<b>🏢Компанія:</b> BOMI"
+    },
+    {
+      "title": "Middle Backend developer (Node.js)",
+      "tags": [
+        "Backend",
+        "JavaScript",
+        "Middle"
+      ],
+      "url": "https://djinni.co/jobs/680339-middle-backend-developer-node-js-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680339-middle-backend-developer-node-js-/?from=list\"><b>Middle Backend developer (Node.js)</b></a>\n<b>🏢Компанія:</b> BOMI"
+    }
+  ],
+  "QA": [
+    {
+      "title": "Middle+ Manual/Auto QA Engineer",
+      "tags": [
+        "QA",
+        "Middle"
+      ],
+      "url": "https://djinni.co/jobs/680340-middle-manual-auto-qa-engineer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680340-middle-manual-auto-qa-engineer/?from=list\"><b>Middle+ Manual/Auto QA Engineer</b></a>\n<b>🏢Компанія:</b> JustCoded"
+    }
+  ],
+  "Lead": [
+    {
+      "title": "Full-Stack Developer Team Lead",
+      "tags": [
+        "Full_Stack",
+        "Lead"
+      ],
+      "url": "https://djinni.co/jobs/680338-full-stack-developer-team-lead/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680338-full-stack-developer-team-lead/?from=list\"><b>Full-Stack Developer Team Lead</b></a>\n<b>🏢Компанія:</b> Develux"
+    },
+    {
+      "title": "Lead Generation Manager",
+      "tags": [
+        "Lead"
+      ],
+      "url": "https://djinni.co/jobs/680355-lead-generation-manager/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680355-lead-generation-manager/?from=list\"><b>Lead Generation Manager</b></a>\n<b>🏢Компанія:</b> PromoRepublic"
+    },
+    {
+      "title": "Lead manager, лідогенератор, менеджер чата (соціальні мережі)",
+      "tags": [
+        "Lead"
+      ],
+      "url": "https://www.work.ua/jobs/5245328/",
+      "text": "<a href=\"https://www.work.ua/jobs/5245328/\"><b>Lead manager, лідогенератор, менеджер чата (соціальні мережі)</b></a>\n<b>\n📍Локація:</b> Харків, вулиця Отакара Яроша, 20.<b>\n💳ЗП:</b> 20 000 – 40 000 грн"
+    }
+  ],
+  "React": [
+    {
+      "title": "CTO - React Mobile Developper",
+      "tags": [
+        "Frontend",
+        "React"
+      ],
+      "url": "https://djinni.co/jobs/680330-cto-react-mobile-developper/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680330-cto-react-mobile-developper/?from=list\"><b>CTO - React Mobile Developper</b></a>\n<b>🏢Компанія:</b> Skarbify"
+    },
+    {
+      "title": "Middle Frontend Developer( React)",
+      "tags": [
+        "Frontend",
+        "React",
+        "Middle"
+      ],
+      "url": "https://djinni.co/jobs/673626-middle-frontend-developer-react-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/673626-middle-frontend-developer-react-/?from=list\"><b>Middle Frontend Developer( React)</b></a>\n<b>🏢Компанія:</b> BOMI"
+    }
+  ],
+  "Sales": [
+    {
+      "title": "Head of Sales/Business development",
+      "tags": [
+        "Sales"
+      ],
+      "url": "https://djinni.co/jobs/634614-head-of-sales-business-development/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/634614-head-of-sales-business-development/?from=list\"><b>Head of Sales/Business development</b></a>\n<b>🏢Компанія:</b> Globy<b>\n💳ЗП:</b> to $1500"
+    },
+    {
+      "title": "Development Manager for Fast-Growing B2B SaaS Tool",
+      "tags": [
+        "Sales"
+      ],
+      "url": "https://djinni.co/jobs/663662-development-manager-for-fast-growing-b2b-saas/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/663662-development-manager-for-fast-growing-b2b-saas/?from=list\"><b>Development Manager for Fast-Growing B2B SaaS Tool</b></a>\n<b>🏢Компанія:</b> TimelinesAI(part of Initech group)"
+    },
+    {
+      "title": "Outreach, Sales, and Growth Manager",
+      "tags": [
+        "Sales"
+      ],
+      "url": "https://djinni.co/jobs/680350-outreach-sales-and-growth-manager/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680350-outreach-sales-and-growth-manager/?from=list\"><b>Outreach, Sales, and Growth Manager</b></a>\n<b>🏢Компанія:</b> Keysender<b>\n💳ЗП:</b> to $6000"
+    },
+    {
+      "title": "PPC Specialist (Google, Facebook Ads)",
+      "tags": [
+        "Sales"
+      ],
+      "url": "https://www.work.ua/jobs/5831078/",
+      "text": "<a href=\"https://www.work.ua/jobs/5831078/\"><b>PPC Specialist (Google, Facebook Ads)</b></a>\n"
+    },
+    {
+      "title": "Менеджер з продажу (ІТ, B2B)",
+      "tags": [
+        "Sales"
+      ],
+      "url": "https://www.work.ua/jobs/5709818/",
+      "text": "<a href=\"https://www.work.ua/jobs/5709818/\"><b>Менеджер з продажу (ІТ, B2B)</b></a>\n"
+    }
+  ],
+  "Backend": [
+    {
+      "title": "Back-end Developer (Fintech Startup)",
+      "tags": [
+        "Backend"
+      ],
+      "url": "https://djinni.co/jobs/680354-back-end-developer-fintech-startup-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680354-back-end-developer-fintech-startup-/?from=list\"><b>Back-end Developer (Fintech Startup)</b></a>\n<b>🏢Компанія:</b> FICY"
+    },
+    {
+      "title": "SaaS Oriented Full-Stack Developer (Python/Django, JS)",
+      "tags": [
+        "Backend",
         "Full_Stack",
         "JavaScript"
       ],
-      "url": "https://djinni.co/jobs/624314-fullstack-javascript-trainee/",
-      "text": "<a href=\"https://djinni.co/jobs/624314-fullstack-javascript-trainee/\"><b>Fullstack JavaScript Trainee</b></a>\n<b>🏢Компанія:</b> SmartIoT<b>\n📍Локація:</b> Ukraine (Remote)"
+      "url": "https://djinni.co/jobs/663746-saas-oriented-full-stack-developer-python-dja/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/663746-saas-oriented-full-stack-developer-python-dja/?from=list\"><b>SaaS Oriented Full-Stack Developer (Python/Django, JS)</b></a>\n<b>🏢Компанія:</b> TimelinesAI(part of Initech group)"
+    },
+    {
+      "title": "Middle Backend developer (Node.js)",
+      "tags": [
+        "Backend",
+        "JavaScript",
+        "Middle"
+      ],
+      "url": "https://djinni.co/jobs/680339-middle-backend-developer-node-js-/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680339-middle-backend-developer-node-js-/?from=list\"><b>Middle Backend developer (Node.js)</b></a>\n<b>🏢Компанія:</b> BOMI"
+    }
+  ],
+  "Customer_Service": [
+    {
+      "title": "Customer Support Manager",
+      "tags": [
+        "Customer_Service"
+      ],
+      "url": "https://djinni.co/jobs/617308-customer-support-manager/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/617308-customer-support-manager/?from=list\"><b>Customer Support Manager</b></a>\n<b>🏢Компанія:</b> AMLBot"
+    },
+    {
+      "title": "Customer Support Specialist (Lifecell)",
+      "tags": [
+        "Customer_Service"
+      ],
+      "url": "https://www.work.ua/jobs/5378034/",
+      "text": "<a href=\"https://www.work.ua/jobs/5378034/\"><b>Customer Support Specialist (Lifecell)</b></a>\n<b>\n📍Локація:</b> Тернопіль<b>\n💳ЗП:</b> 14 000 грн"
+    },
+    {
+      "title": "Customer support representative",
+      "tags": [
+        "Customer_Service"
+      ],
+      "url": "https://www.work.ua/jobs/5732546/",
+      "text": "<a href=\"https://www.work.ua/jobs/5732546/\"><b>Customer support representative</b></a>\n<b>\n💳ЗП:</b> 35 000 – 50 000 грн"
+    }
+  ],
+  "Project_Manager": [
+    {
+      "title": "Project Manager",
+      "tags": [
+        "Project_Manager"
+      ],
+      "url": "https://djinni.co/jobs/680353-project-manager/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680353-project-manager/?from=list\"><b>Project Manager</b></a>\n<b>🏢Компанія:</b> UPPeople<b>\n💳ЗП:</b> to $3000"
+    },
+    {
+      "title": "Project manager (digital)",
+      "tags": [
+        "Project_Manager"
+      ],
+      "url": "https://www.work.ua/jobs/5820222/",
+      "text": "<a href=\"https://www.work.ua/jobs/5820222/\"><b>Project manager (digital)</b></a>\n<b>\n📍Локація:</b> Київ, вулиця Саперно-Слобідська, 22.<b>\n💳ЗП:</b> 35 000 грн"
+    }
+  ],
+  "Game_Dev": [
+    {
+      "title": "Unreal Engine Developer",
+      "tags": [
+        "Game_Dev"
+      ],
+      "url": "https://djinni.co/jobs/680352-unreal-engine-developer/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680352-unreal-engine-developer/?from=list\"><b>Unreal Engine Developer</b></a>\n<b>🏢Компанія:</b> Boostbase Group"
+    }
+  ],
+  "Designer": [
+    {
+      "title": "Growth Manager (for Web Design Software Product)",
+      "tags": [
+        "Designer"
+      ],
+      "url": "https://djinni.co/jobs/680357-growth-manager-for-web-design-software-produc/?from=list",
+      "text": "<a href=\"https://djinni.co/jobs/680357-growth-manager-for-web-design-software-produc/?from=list\"><b>Growth Manager (for Web Design Software Product)</b></a>\n<b>🏢Компанія:</b> MOM Design"
     }
   ]
 }

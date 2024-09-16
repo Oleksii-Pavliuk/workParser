@@ -1,4 +1,4 @@
-import TelegramBot from 'node-telegram-bot-api';
+import TelegramBot from '../tgbot-class/tgbot.mjs';
 import {appendFileSync} from "node:fs";
 import config from "../config/config.mjs";
 import { tracer } from "../opentelemetry-tracing.mjs"
@@ -12,10 +12,15 @@ export const customLog = async (message) => {
   const span = tracer.startSpan("messages");
   span.addEvent("log", { message: message });
   span.end();
-	const bot = new TelegramBot(token,{'polling': false});
+	const bot = new TelegramBot(token);
 	let date = new Date()
 	let log = date + ' - ' + message + '\n';
 	appendFileSync(logsfile, log);
 	console.log(log);
-	await bot.sendMessage(logsChat,log);
+	try{
+		await bot.sendMessage(logsChat,log);
+	}catch(err){
+		console.log(err);
+	}
+
 }

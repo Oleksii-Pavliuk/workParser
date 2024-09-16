@@ -20,85 +20,51 @@ const config = convict({
 		format: String,
 		default: null,
 		env: "LOGS_CHAT",
-        arg: "logsChat"
+    arg: "logsChat"
 	},
-    botToken: {
-        doc: "API token of tg bot",
-        format: String,
-        default: null,
-        env: "BOT_TOKEN",
-        arg: "botToken"
-    },
-    it: {
-        doc: "Id of the IT chanell",
-        format: String,
-        default: null,
-        env: "IT",
-        arg: "it"
-    },
-    remote: {
-        doc: "Id of the IT/Remote chanell",
-        format: String,
-        default: null,
-        env: "IT",
-        arg: "remote"
-    },
-    shabashka_odesa: {
-        doc: "id of the shabahska odesa chanel",
-        format: String,
-        default: null,
-        env: "SHABASHKA_ODESA",
-        arg: "shabashka_odesa"
-    },
+	itChanelId: {
+		doc: "Id of the IT chanel",
+		format: String,
+		default: null,
+		env: "IT",
+		arg: "itChanelId"
+	},
+	devOpsChanelId: {
+		doc: "Id of the DevOps chanel",
+		format: String,
+		default: null,
+		env: "DEVOPS",
+		arg: "DevdevOpsChanelIdOps"
+	},
+	botToken: {
+			doc: "API token of tg bot",
+			format: String,
+			default: null,
+			env: "BOT_TOKEN",
+			arg: "botToken"
+	},
+
 	logsFile: {
 		doc: "The name of the logs file",
 		format: String,
 		default: "logs.txt",
 		arg: "logsFile"
 	},
-	workUaSchedule: {
-		doc: "Schedule for work.ua cron job",
-		format: String,
-		default: "* * * * * *",
-		arg: "workUaSchedule"
+
+	parsers: {
+		doc : "List of parsers",
+		format: Array,
+		default: null,
+		arg: "parsers"
 	},
-	workUaTimezone: {
-		doc: "Time Zone for work ua cron job",
-		format: String,
-		default: "Europe/Kiev",
-		arg: "workUaTimezone",
+
+	groups: {
+			doc : "Groups for IT adds",
+			format: Object,
+			default: null,
+			arg: "groups"
 	},
-	djinnyCoSchedule: {
-		doc: "Schedule for djinny.co cron job",
-		format: String,
-		default: "* * * * * *",
-		arg: "djinnyCoSchedule"
-	},
-    djinnyTimezone: {
-		doc: "Time Zone for djinny cron job",
-		format: String,
-		default: "Europe/Kiev",
-		arg: "djinnyTimezone",
-	},
-    targets: {
-        doc : "Parsing targets",
-        format: Object,
-        default: null,
-        arg: "targets"
-    },
-    // hastags: {
-    //     doc : "Hastags to use. They are cattegories from djinny",
-    //     format: Array,
-    //     default: null,
-    //     arg: "hastags"
-    // },
-    groups: {
-        doc : "Groups for IT adds",
-        format: Object,
-        default: null,
-        arg: "groups"
-    },
-    ServiceName: {
+	ServiceName: {
 		doc: "The name by which the service is registered in Consul. If not specified, the service is not registered",
 		format: "*",
 		default: "Telegram Bot Service",

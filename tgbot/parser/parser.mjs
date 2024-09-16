@@ -2,46 +2,68 @@ import {JSDOM} from 'jsdom';
 import {CronJob} from "cron";
 
 
-import config from "../config/config.mjs";
+import TelegramBot from "../tgbot-class/tgbot.mjs"
 import { customLog } from "../common/log.mjs";
 import { fetchPage } from '../common/fetching.mjs'
 import { Database } from '../db/db.mjs';
 import { tagAdd } from '../common/taggingService.mjs';
 
-
+import { parseJobs as workUaParse,scrapeAdds as workUaScrape } from "../workUa/workUa-parsing.mjs";
+import { parseJobs as djinnyCoParse,scrapeAdds as djinnyCoScrape } from "../djinnyCo/djinnyCo-parsing.mjs";
+import { parseJobs as douUaParse,scrapeAdds as douUaScrape } from "../dou/douUa-parsing.mjs";
+const helperFunctions = {workUaParse,workUaScrape,djinnyCoParse,djinnyCoScrape,douUaParse,douUaScrape};
 
 export class Parser {
 
 		/**
 	 * Create a new ```Parser```.
-	 * @param schedule The time to fire off parsing cronJob. This can be in the form of cron syntax or a JS ```Date``` object.
-	 * @param path is an object with url of the website's root and url of the adds page: {url: "www.djinny.co", uri: "/adds"}.
-	 * @param channel string with the key to the channel in convict's config.
+	 * @param settings Parser settings.
 	 * @param bot TelegramBot.
-	 * @param timeZone Specify the timezone for the execution. This will modify the actual time relative to your timezone. If the timezone is invalid, an error is thrown. Can be any string accepted by luxon's ```DateTime.setZone()``` (https://moment.github.io/luxon/api-docs/index.html#datetimesetzone).
-	 * @param scrapeAdds Specify the function that scrapes adds.
-	 * @param timeZone  Specify the function that parses adds.
 	 */
-	constructor(schedule,path,channel,bot,timeZone,scrapeAdds,parseJobs) {
-		this.cronSchedule = schedule;
-		this.timeZone = timeZone;
-		this.path = path;
-		this.channel = channel;
-		this.#bot = bot;
-		this.#db = new Database(this.channel);
-		this.scrapeAdds = scrapeAdds;
-		this.parseJobs = parseJobs;
+	constructor(settings,token) {
+		if(!settings || typeof settings != "object"){
+			throw new Error ("No valid settings provided")
+		}
+		if(!settings.schedule || typeof settings.schedule != "string"){
+			throw new Error ("No valid schedule provided")
+		}
+		if(!settings.timezone || typeof settings.timezone != "string"){
+			throw new Error ("No valid timezone provided")
+		}
+		if(!settings.channelId || typeof settings.channelId != "string"){
+			throw new Error ("No valid channelId provided")
+		}
+		if(!settings.url || typeof settings.url != "string"){
+			throw new Error ("No valid url provided")
+		}
+		if(!settings.parser || !helperFunctions[settings.parser]){
+			throw new Error ("No valid parser provided")
+		}
+		if(!settings.scraper || !helperFunctions[settings.scraper]){
+			throw new Error ("No valid scraper provided")
+		}
+
+		this.schedule = settings.schedule;
+		this.timezone = settings.timezone;
+		this.channelId = settings.channelId
+		this.path = {url: settings.url,uri: settings.uri};
+		this.#bot = new TelegramBot(token);
+		this.#db = new Database(settings.dbName);
+		this.scrapeAdds = helperFunctions[settings.scraper];
+		this.parseJobs = helperFunctions[settings.parser]
+		this.customTag = settings.customTag || null
+		this.displayImage = settings.displayImage || null
 	}
-	cronSchedule
-	timeZone
+	schedule
+	timezone
 	path
-	channel
+	channelId
 	#bot
 	#db
 
 	#logToDB(path,addObj) {
 		if (!this.#db.getListners[path]){
-			this.#db.onUpdate(path,this.#checkFor10addsAndSendMessage(path))
+			this.#db.onUpdate(path,this.#checkFor5addsAndSendMessage(path))
 		}
 		this.#db.appendUniqly(`/${path}/`,{
 			"title" : addObj.title,
@@ -51,20 +73,22 @@ export class Parser {
 		});
 	}
 
-	async #checkFor10addsAndSendMessage(path) {
+	async #checkFor5addsAndSendMessage(path) {
 		try{
 			const adds = this.#db.get(path);
-			if (adds && adds.length && adds.length > 9) {
-				const heading = '<b>Список актуальних вакансій за посадою #' + path + '</b>\n\n'
+			if (adds && adds.length && adds.length > 4) {
+				const heading = '<b>#' + path + '</b>\n\n'
 				let text = heading;
-				adds.forEach((add,index) => {
-					if (add.text) {
-						text += `${index+1}.${add.text}\n\n`
+				for(const i in adds){
+					if (adds[i].text) {
+						const number = parseInt(i)+1
+						text += `${number}.${adds[i].text}\n\n`
 					}
-				})
+					if(i == 5)break
+				}
 				if (text > heading){
-					const chatId = config.get(this.channel);
-					setTimeout(() => this.#bot.sendMessage(chatId, text, {'parse_mode': 'HTML'}),1000)
+					if(this.displayImage) setTimeout(() => this.#bot.sendPicture(this.channelId,this.displayImage, text),1000)
+					else setTimeout(() => this.#bot.sendMessage(this.channelId, text),1000)
 				}
 				this.#db.clear(path);
 			}
@@ -84,8 +108,9 @@ export class Parser {
 
 				let jobAdds = await this.parseJobs(jobsHtmls);
 				let tagged = 0;
-				jobAdds.forEach((addObj) => {
-					addObj = tagAdd(addObj);
+				jobAdds?.forEach((addObj) => {
+					if(this.customTag) addObj.tags = [this.customTag];
+					else addObj = tagAdd(addObj);
 					if (addObj.tags) {
 						tagged++;
 						addObj.tags.forEach(tag => {
@@ -93,7 +118,7 @@ export class Parser {
 						})
 					}
 				})
-				customLog(`${this.path.url.slice(8)} parsing done, ${tagged} adds tagged and ${jobAdds.length - tagged} not`);
+				customLog(`${this.path.url + this.path.uri} parsing done, ${tagged} adds tagged and ${jobAdds.length - tagged} not`);
 		}catch (err){
 			customLog(err);
 			console.log(err);
@@ -102,7 +127,11 @@ export class Parser {
 
 
 	startCronJob() {
-		const job = new CronJob(this.cronSchedule,() => this.AddsJob(this.#bot),null,true,this.timeZone);
+		try{
+			const job = new CronJob(this.schedule,() => this.AddsJob(this.#bot),null,true,this.timezone);
+		}catch(err){
+			console.log(this)
+		}
 	}
 
 }
