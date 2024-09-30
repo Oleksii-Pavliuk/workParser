@@ -1,6 +1,7 @@
 import axios from "axios";
 import fs from "fs";
 import FormData from "form-data"
+import { customLog } from "../common/log.mjs";
 
 export default class TelegramBot {
 
@@ -30,7 +31,7 @@ export default class TelegramBot {
 				return data.result;
 			}
 		} catch (err) {
-			throw new Error(`Error parsing response: ${err}`);
+			customLog(err);
 		}
 
 
@@ -64,7 +65,7 @@ export default class TelegramBot {
 				return data.result;
 			}
 		} catch (err) {
-			throw new Error(`Error parsing response: ${err}`);
+			customLog(err);
 		}
 
 
