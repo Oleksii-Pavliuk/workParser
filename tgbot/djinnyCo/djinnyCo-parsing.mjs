@@ -45,7 +45,7 @@ const parseJobs = async (doms) => {
 
       if (dom.querySelector('h1') && dom.querySelector('h1').childNodes[1] && dom.querySelector('h1').childNodes[1].textContent) jsonObj.sallary = dom.querySelector('h1').childNodes[1].textContent.trim();
 
-      if (dom.querySelector('a[href^="/jobs/?company="].job-details--title') && dom.querySelector('a[href^="/jobs/?company="].job-details--title').textContent) jsonObj.employer = dom.querySelector('a[href^="/jobs/?company="].job-details--title').textContent.trim();
+      if (dom.querySelector('a[href^="/jobs/?company="].text-reset') && dom.querySelector('a[href^="/jobs/?company="].text-reset').innerHTML) jsonObj.employer = dom.querySelector('a[href^="/jobs/?company="].text-reset').innerHTML.trim();
 
       const location = handleLocation(dom);
       if (location) jsonObj.address = location;

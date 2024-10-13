@@ -62,7 +62,7 @@ const parseFromJsonToText = (json) =>{
   let text = '';
   let obj = {};
 	if (json.title) text += `<a href="${json.url}"><b>` + json.title + '</b></a>';
-  if (json.employer) text += '<b>\n🏢Компанія:</b> ' + json.employer;
+  if (json.employer?.name) text += '<b>\n🏢Компанія:</b> ' + json.employer.name;
   if (json.address) text += '<b>\n📍Локація:</b> ' + json.address;
   if (json.sallary) text += '<b>\n💳ЗП:</b> ' + json.sallary;
 
