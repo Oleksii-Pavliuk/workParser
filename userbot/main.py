@@ -1,6 +1,6 @@
 from pyrogram import filters
 from config import app,targets,logs_chat
-from bazar_to_chanell import bazar_to_chanell
+from rusrek_to_chanell import rusrek_to_chanell
 from it_duplicationg import duplicate
 from datetime import datetime
 from settings import log
@@ -15,7 +15,6 @@ def on_disconnect(client):
 @app.on_message(filters.chat(channels))
 def handle_message(client, message):
   print(message)
-  log(client,f"Received message: {message.text} \nfrom: {message.chat.title}")
   processing = False
   for target in targets:
     if message.chat.id == target.get("target") and target.get("chat_duplication",False):
@@ -25,7 +24,7 @@ def handle_message(client, message):
     elif message.chat.id == target.get("target"):
       log(client,f"Processing message: {message.text} \nfrom: {message.chat.title}")
       processing = True
-      bazar_to_chanell(app, client, message, target)
+      rusrek_to_chanell(app, client, message, target)
   if not processing:
     log(client,f"Skipping message from: {message.chat.title}")
 
